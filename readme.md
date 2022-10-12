@@ -37,7 +37,10 @@ SOFTWARE.
 <img title="UML" alt="UML diagram" src="uml/uml_diagram.svg">
 
 ## Activity diagram
-<img title="Activity" alt="UML diagram" src="uml/activity_diagram.svg">
+<img title="Activity diagram" alt="Activity diagram" src="uml/activity_diagram.svg">
+
+## Quad-Chart
+<img title="Quad-Chart" alt="Quad-chart" src="uml/quad_chart.png">
 
 ## Standard install via command-line
 ```
