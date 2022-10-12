@@ -42,6 +42,8 @@ SOFTWARE.
 ## Quad-Chart
 <img title="Quad-Chart" alt="Quad-chart" src="uml/quad_chart.png">
 
+## Proposal Video
+[Mid-term Proposal Video](https://drive.google.com/file/d/1JcN-jdWsAfGG5XlVniN_F_-hbOWnSuIF/view?usp=sharing)
 ## Standard install via command-line
 ```
 git clone --recursive https://github.com/shaileshpranav/Human_avoidance
