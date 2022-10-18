@@ -1,6 +1,8 @@
 # Human Detection and Tracking
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![C/C++ CI](https://github.com/shaileshpranav/Human_avoidance/actions/workflows/CI.yml/badge.svg)](https://github.com/shaileshpranav/Human_avoidance/actions/workflows/CI.yml)
+
 ## Overview
 Human detection and tracking project for Midterm of course ENPM 808X
 
@@ -47,7 +49,6 @@ SOFTWARE.
 
 [Phase-0 Proposal Video](https://drive.google.com/file/d/1JcN-jdWsAfGG5XlVniN_F_-hbOWnSuIF/view?usp=sharing)
 
-[Product-log](https://docs.google.com/spreadsheets/d/13NfVb0g8LwvVlH9F1EcA1EnQb8gwcYmieM8Q2csQmX0/edit#gid=0)
 
 ## Standard install via command-line
 ```

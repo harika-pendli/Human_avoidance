@@ -1,0 +1,27 @@
+name: C/C++ CI
+
+on:
+  push:
+      branches: [ main ]
+  pull_request:
+      branches: [ main ]
+  workflow_dispatch:
+   
+jobs:
+  build-and-test:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: install packages
+        run: |
+          pip install --user cpp-coveralls
+          sudo apt-get install -y -qq lcov
+      - name: build and test
+        run: |
+          export CXX=$COMPILER;
+          mkdir build
+          cd build
+          cmake -DCOVERAGE=ON -DCMAKE_BUILD_TYPE=Debug ../
+          make
+          make code_coverage
+          test/cpp-test
