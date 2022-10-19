@@ -5,14 +5,13 @@
  * @version 0.1
  * @date 2022-10-11
  * 
- * @copyright Copyright (c) 2022
+ * @copyright MIT License (c) 2022 Shailesh Pranav Rajendran and Harika Pendli
  * 
  */
 #ifndef INCLUDE_CAMERA_HPP_
 #define INCLUDE_CAMERA_HPP_
 
 //TO DO :
-// add license to all files
 //might need to replace arrays with eigen matrices 
 //find correct way to include opencv library
 //add a function to start inputing frames or video  get_image()

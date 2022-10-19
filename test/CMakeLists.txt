@@ -1,5 +1,7 @@
 set(GTEST_SHUFFLE 1)
 
+find_package( OpenCV REQUIRED )
+
 add_executable(
     cpp-test
     main.cpp

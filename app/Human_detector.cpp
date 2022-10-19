@@ -1,39 +1,34 @@
 /**
  * @file Human_detector.hpp
- * @author Harika Pendli (hpendli@umd.edu)
+ * @author Harika Pendli (hpendli@umd.edu) and Shailesh Pranav Rajendran (spraj@umd.edu)
  * @brief Driver class for all classes
  * @version 0.1
  * @date 2022-10-18
  * 
- * @copyright Copyright (c) 2022
+ * @copyright MIT License (c) 2022 Shailesh Pranav Rajendran and Harika Pendli
  * 
  */
 
-//TO DO:: 
-    // ADD mit liCENSE  
-    // complete preprocess image stub
-    // 
 
 #include <iostream>
 #include <string>
 #include <vector>
 #include <array>
 #include <iostream>
-#include "camera.hpp"
-#include "detect.hpp"
-#include "track.hpp"
-
+#include "../include/camera.hpp"
+#include "../include/detect.hpp"
+#include "../include/track.hpp"
+#include "../include/Human_detector.hpp"
 
 /**
  * @brief initialises instances of all classes and sets the detector in motion
  * 
  */
-void Human_detector::initialise() {
+void HumanDetector::initialise() {
 
     std::cout<<("HUman detector and tracker initialised");
 }
 
-// return image   image_preprocess();
 
 
 
@@ -42,7 +37,7 @@ void Human_detector::initialise() {
  * 
  * @return std::vector<std::vector<float>> 
  */
-std::vector<std::vector<float>> Human_Detector::camera_robot_array(std::vector<std::vector<float>>) {
+std::vector<std::vector<float>> HumanDetector::camera_robot_array(std::vector<std::vector<float>>) {
     
     //stub
     std::vector<std::vector<float>> out;

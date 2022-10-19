@@ -1,26 +1,23 @@
 /**
  * @file detect.cpp
- * @author Harika Pendli (hpendli@umd.edu)
+ * @author Harika Pendli (hpendli@umd.edu) and Shailesh Pranav Rajendran (spraj@umd.edu)
  * @brief 
  * @version 0.1
  * @date 2022-10-18
  * 
- * @copyright Copyright (c) 2022
+ * @copyright MIT License (c) 2022 Shailesh Pranav Rajendran and Harika Pendli
  * 
  */
 // TO DO:
-
-    //add a function to start inputing frames or video  get_image()
-    // i am not sure how to declare 
     //insert model in here to detect
-    // add MIT license
+
 
 #include <iostream>
 #include <string>
 #include <vector>
 #include <array>
 #include <iostream>
-#include "include/detect.hpp"
+#include "../include/detect.hpp"
 
 /**
  * @brief detects humans in the frame with some confidence

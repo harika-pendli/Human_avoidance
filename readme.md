@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![C/C++ CI](https://github.com/shaileshpranav/Human_avoidance/actions/workflows/CI.yml/badge.svg)](https://github.com/shaileshpranav/Human_avoidance/actions/workflows/CI.yml)
+[![Coverage Status](https://coveralls.io/repos/github/shaileshpranav/Human_avoidance/badge.svg?branch=main)](https://coveralls.io/github/shaileshpranav/Human_avoidance?branch=main)
 
 ## Overview
 Human detection and tracking project for Midterm of course ENPM 808X

@@ -1,20 +1,16 @@
 /**
  * @file camera.cpp
- * @author Harika Pendli (hpendli@umd.edu)
+ * @author Harika Pendli (hpendli@umd.edu) and Shailesh Pranav Rajendran (spraj@umd.edu)
  * @brief 
  * @version 0.1
  * @date 2022-10-18
  * 
- * @copyright Copyright (c) 2022
+ * @copyright MIT License (c) 2022 Shailesh Pranav Rajendran and Harika Pendli
  * 
  */
 // TO DO:
-
-    //add a function to start inputing frames or video  get_image()
-    // i am not sure how to declare 
     // add doxygen comment to Camera::set_intrinsic_camera_params
     //add doxygen comment about class 
-    // add MIT license
 
 
 #include <iostream>
@@ -25,10 +21,18 @@
 //#include <Eigen/Dense>
 //#include <opencv2/opencv.hpp> 
 
-#include "include/camera.hpp"
+#include "../include/camera.hpp"
 
 
-
+/**
+ * @brief 
+ * 
+ * @param para1 
+ * @param para2 
+ * @param para3 
+ * @param para4 
+ * @param para5 
+ */
 void Camera::set_intrinsic_camera_params (float para1,float para2,float para3,float para4,float para5) {         
         
         std::cout<<"Set intrinsic parameter matrix";

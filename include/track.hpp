@@ -1,11 +1,11 @@
 /**
  * @file track.cpp
- * @author Shailesh Pranav Rajendran (spraj@umd.edu)
+ * @author Harika Pendli (hpendli@umd.edu) and Shailesh Pranav Rajendran (spraj@umd.edu)
  * @brief Tracking class
  * @version 0.1
  * @date 2022-10-11
  * 
- * @copyright Copyright (c) 2022
+ * @copyright MIT License (c) 2022 Shailesh Pranav Rajendran and Harika Pendli
  * 
  */
 #ifndef INCLUDE_TRACK_HPP_
