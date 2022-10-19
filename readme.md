@@ -11,6 +11,14 @@ Acme Robotics Inc. is a private company set to launch a 4-wheeled robot used to 
 
 Object detection is a very important computer vision task. Human detection is the task of locating all instances of human beings present in an image, and it has been most widely accomplished by searching all locations in the image, at all possible scales, and comparing a small area at each location with known templates or patterns of people. Human tracking is the process of temporally associating the human detections within a video sequence to generate persistent paths, or trajectories, of the people. Human detection and tracking are generally considered the first two processes in a video surveillance pipeline, and can feed into higher-level reasoning modules such as action recognition and dynamic scene analysis. Object detection and tracking is of utmost importance for different kinds of applications such as safety, surveillance, man-machine interaction, driving assistance system, traffic monitoring. Finding people in images has attracted much attention in recent years for practical applications such as visual surveillance. The detection of a human being is important for abnormal event detection, human gait characterization, people counting, person identification and tracking, pedestrian detection, gender classification. Human detection and tracking are tasks of computer vision systems for locating and following people in video imagery.
 
+This is an example of human detection.
+
+<img title="Detect_Ex" alt="Detect_Ex" src="docs/detect.jpeg">
+
+And This is an example of human tracking.
+
+<img title="Track_Ex" alt="Track_Ex" src="docs/track.jpeg">
+
 In this module, we aim to build a module which when recieves video feed, starts detecting humans in the frame and gives ID to individual instances and tracks them over rest of the frames. These coordinates are then transformed into the robots reference frame and the final output is their (x,y,z) coordinate with respect to the robot reference frame.
 
 ## Authors
@@ -43,33 +51,32 @@ SOFTWARE.
 
 ```
 
-## UML
-<img title="UML" alt="UML diagram" src="uml/uml_diagram.svg">
-
-## Activity diagram
-<img title="Activity diagram" alt="Activity diagram" src="uml/activity_diagram.svg">
-
-## Quad-Chart
-<img title="Quad-Chart" alt="Quad-chart" src="uml/quad_chart.png">
-
 ## Links
-[Phase-0 Proposal](https://github.com/shaileshpranav/Human_avoidance/blob/main/Proposal.pdf)
+- [Phase-0 Proposal](https://github.com/shaileshpranav/Human_avoidance/blob/main/Proposal.pdf)
 
-[Phase-0 Proposal Video](https://drive.google.com/file/d/1JcN-jdWsAfGG5XlVniN_F_-hbOWnSuIF/view?usp=sharing)
+- [Phase-0 Proposal Video](https://drive.google.com/file/d/1JcN-jdWsAfGG5XlVniN_F_-hbOWnSuIF/view?usp=sharing)
 
-[Product-log](https://docs.google.com/spreadsheets/d/13NfVb0g8LwvVlH9F1EcA1EnQb8gwcYmieM8Q2csQmX0/edit#gid=0)
+- [Product-log](https://docs.google.com/spreadsheets/d/13NfVb0g8LwvVlH9F1EcA1EnQb8gwcYmieM8Q2csQmX0/edit#gid=0)
 
-## Standard install via command-line
+- [Sprint Review](https://docs.google.com/document/d/1Nb_psVTufyzcFsdD67MJTqQvALrAlez0QEYVcEus4a4/edit)
+
+
+
+## Standard Build via command-line
 ```
 git clone --recursive https://github.com/shaileshpranav/Human_avoidance
 cd <path to repository>
-mkdir build
-cd build
+mkdir build && cd build
 cmake ..
 make
-Run tests: ./test/cpp-test
-Run program: ./app/shell-app
 ```
+## Run Test:
+
+    ./test/cpp-test
+## Run program:
+
+     ./app/shell-app
+
 
 ## Building for code coverage
 ```
@@ -77,4 +84,32 @@ sudo apt-get install lcov
 cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
 make
 make code_coverage
+```
+
+##  Install Dependencies
+```
+sh dependencies.sh
+```
+## Plugins
+- Google C++ Sytle
+```
+clang-format -style=Google -i your_file.cpp
+```
+
+- Cpplint
+
+```
+# You may need to install cpplint:
+sudo apt install python3-pip
+pip install cpplint
+
+# read the cpplint manual to get an idea of what it does:
+~/.local/bin/cpplint -h
+#to run on a file:
+cpplint "FIlename.cpp"
+```
+
+- cppCheck
+```
+cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" )
 ```
