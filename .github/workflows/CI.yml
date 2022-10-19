@@ -17,14 +17,12 @@ jobs:
           pip install --user cpp-coveralls
           sudo apt-get install -y -qq lcov
       - name: build and test
+        working-directory: ${{github.workspace}}/build
         run: |
           export CXX=$COMPILER;
-          mkdir build
-          cd build
           cmake -DCOVERAGE=ON -DCMAKE_BUILD_TYPE=Debug ../
           make
           make code_coverage
-          test/cpp-test
      # Upload coverage result to Coverage.io 
       - name: Upload result to Coveralls.io
         uses: coverallsapp/github-action@1.1.3
