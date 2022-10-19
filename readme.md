@@ -6,6 +6,12 @@
 ## Overview
 Human detection and tracking project for Midterm of course ENPM 808X
 
+Acme Robotics Inc. is a private company set to launch a 4-wheeled robot used to deliver packages inside office for an undisclosed multinational company next. This robot is set to debut early next year. It moves in the corridor at a walking pace. The package is stored inside of the robot and drives itself to the customer. They have given us complete ownership of designing and developing a new feature for this robots perceeption stack -"Human detector and tracker". 
+
+Object detection is a very important computer vision task. Human detection is the task of locating all instances of human beings present in an image, and it has been most widely accomplished by searching all locations in the image, at all possible scales, and comparing a small area at each location with known templates or patterns of people. Human tracking is the process of temporally associating the human detections within a video sequence to generate persistent paths, or trajectories, of the people. Human detection and tracking are generally considered the first two processes in a video surveillance pipeline, and can feed into higher-level reasoning modules such as action recognition and dynamic scene analysis. Object detection and tracking is of utmost importance for different kinds of applications such as safety, surveillance, man-machine interaction, driving assistance system, traffic monitoring. Finding people in images has attracted much attention in recent years for practical applications such as visual surveillance. The detection of a human being is important for abnormal event detection, human gait characterization, people counting, person identification and tracking, pedestrian detection, gender classification. Human detection and tracking are tasks of computer vision systems for locating and following people in video imagery.
+
+In this module, we aim to build a module which when recieves video feed, starts detecting humans in the frame and gives ID to individual instances and tracks them over rest of the frames. These coordinates are then transformed into the robots reference frame and the final output is their (x,y,z) coordinate with respect to the robot reference frame. 
+
 ## Authors
 - [Shailesh Pranav Rajendran](https://github.com/shaileshpranav)
 - [Harika Pendli](https://github.com/harika-pendli)
@@ -35,6 +41,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ```
+
 ## UML
 <img title="UML" alt="UML diagram" src="uml/uml_diagram.svg">
 
