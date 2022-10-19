@@ -20,7 +20,7 @@ jobs:
         working-directory: ${{github.workspace}}/build
         run: |
           export CXX=$COMPILER;
-          cmake -DCOVERAGE=ON -DCMAKE_BUILD_TYPE=Debug ../
+          cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug -B ${{github.workspace}}/build 
           make
           make code_coverage
      # Upload coverage result to Coverage.io 
