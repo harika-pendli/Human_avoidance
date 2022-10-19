@@ -1,5 +1,5 @@
 /**
- * @file track.hpp
+ * @file track.cpp
  * @author Shailesh Pranav Rajendran (spraj@umd.edu)
  * @brief Tracking class
  * @version 0.1
@@ -8,7 +8,29 @@
  * @copyright Copyright (c) 2022
  * 
  */
+#ifndef INCLUDE_TRACK_HPP_
+#define INCLUDE_TRACK_HPP_
 
-class Track{
+#include <iostream>
+#include <string>
+#include <vector>
+#include <array>
+#include <iostream>
+
+/**
+ * @brief class that tracks the objects from all frames of the video feed
+ * 
+ */
+
+class Tracker{
+    private:
+    int SIZE;
+    int object_id;
+    int assign_id(std::vector<float>);
+
+    public:
+    int frame_id;
+    std::vector<float> track (std::vector<float>);
 
 };
+#endif //TRACK_HPP_
