@@ -22,7 +22,7 @@
 
 
 class HumanDetector{
-    private:
+    // private:
     // camera Camera;
     // detect Detector;
     // track Tracker;

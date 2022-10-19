@@ -26,9 +26,9 @@ class Tracker{
     private:
     int SIZE;
     int object_id;
-    int assign_id(std::vector<float>);
 
     public:
+    int assign_id(std::vector<float>);
     int frame_id;
     std::vector<float> track (std::vector<float>);
 

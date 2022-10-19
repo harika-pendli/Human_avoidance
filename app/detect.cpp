@@ -32,7 +32,7 @@ std::vector<std::array<float,4>> Detector::detecting() {
     detections.push_back(arr);
     return detections;
 
-}; // function that takes a frame and detects
+} // function that takes a frame and detects
 
 
 /**

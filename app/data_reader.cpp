@@ -14,11 +14,11 @@
  * @brief Constructor for Data Reader
  * 
  */
-DataReader::DataReader()= default;
+// DataReader::DataReader();
 
 void DataReader::setImagepath(std::string path)
 {
-    img_path = std::move(path);
+    img_path = path;
 }
 void DataReader::setVideopath(std::string path)
 {

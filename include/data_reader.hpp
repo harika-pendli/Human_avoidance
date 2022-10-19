@@ -30,7 +30,7 @@ class DataReader{
         std::string video_path;
 
     public:
-        DataReader();
+        // DataReader();
         /**
          * @brief Set the Imagepath object
          * 
