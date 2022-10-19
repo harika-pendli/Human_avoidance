@@ -16,11 +16,13 @@ jobs:
         run: |
           pip install --user cpp-coveralls
           sudo apt-get install -y -qq lcov
-      - name: build and test
-        working-directory: ${{github.workspace}}/build
+      - name: build
         run: |
           export CXX=$COMPILER;
           cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug -B ${{github.workspace}}/build 
+      - name: make
+        working-directory: ${{github.workspace}}/build
+        run: |
           make
           make code_coverage
      # Upload coverage result to Coverage.io 
