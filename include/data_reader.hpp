@@ -34,23 +34,26 @@ class DataReader {
    */
   std::string video_path;
 
+  int outputWidth;
+
+  int outputHeight;
  public:
  /**
   * @brief Construct a new Data Reader object
   * 
   */
-  // DataReader();
+  DataReader();
   /**
    * @brief Set the Imagepath object
    *
    */
-  void setImagepath(const std::string*);
+  void setImagepath(std::string);
 
   /**
    * @brief Set the Videopath object
    *
    */
-  void setVideopath(const std::string*);
+  void setVideopath(std::string);
   /**
    * @brief Get the Imagepath object
    *
@@ -64,6 +67,22 @@ class DataReader {
    * @return std::string
    */
   std::string getVideopath();
+  
+  int getOutputWidth();
+
+  int getOutputHeight();
+
+  void setOutputHeight(int height);
+
+  void setOutputWidth(int width);
+
+  /**
+   * @brief Get the Input dataType
+   * 
+   * @param parser 
+   * @return std::string 'Image', 'Video' or 'Error'
+   */
+  std::string getInput(const cv::CommandLineParser parser);
 
   /**
    * @brief A function for image preprocessing
@@ -71,7 +90,7 @@ class DataReader {
    * @param frame The input image
    * @return cv::VideoCapture
    */
-  cv::Mat imgprocessor(cv::Mat frame);
+  cv::VideoCapture imgProcessor(char,cv::Mat frame);
 
   /**
    * @brief A function for video preprocessing
@@ -80,8 +99,10 @@ class DataReader {
    * @param video Resulting video for the image to be written onto
    * @return cv::VideoCapture
    */
-  cv::VideoCapture videoprocessor(cv::Mat frame, cv::VideoWriter video);
+  cv::VideoCapture videoProcessor(char, cv::Mat frame, cv::VideoWriter video);
 
+
+  std::string getInput(cv::CommandLineParser, std::string*);
 /**
  * @brief Destroy the Data Reader object
  * 
