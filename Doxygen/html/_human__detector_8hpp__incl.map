@@ -1,0 +1,10 @@
+<map id="Human_detector.hpp" name="Human_detector.hpp">
+<area shape="rect" id="node1" title="Driver class for the project." alt="" coords="221,5,379,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="132,155,188,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="233,155,313,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="348,155,407,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="437,155,499,181"/>
+<area shape="rect" id="node6" href="$camera_8hpp.html" title="Camera class." alt="" coords="36,80,199,107"/>
+<area shape="rect" id="node7" href="$detect_8hpp.html" title="Detection class." alt="" coords="223,80,377,107"/>
+<area shape="rect" id="node8" href="$track_8hpp.html" title=" " alt="" coords="401,80,548,107"/>
+</map>
