@@ -21,8 +21,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-//#include<Eigen/Dense> //find correct way to include eigen library
-//#include <opencv2/opencv.hpp> //find correct way to include opencv library
+// #include<Eigen/Dense> //find correct way to include eigen library
+// #include <opencv2/opencv.hpp> //find correct way to include opencv library
 
 /**
  * @brief  Class to store camera parameters and to decode video and send frames
@@ -31,7 +31,7 @@
 class Camera {
  private:
   std::array<float, 4> camera_parameters_intrinsic;
-  std::array<float, 9> camera_paramters_rotation;
+  std::array<float, 9> camera_parameters_rotation;
   std::array<float, 3> camera_parameters_translation;
 
  public:
@@ -47,4 +47,4 @@ class Camera {
   // add a function to start inputing frames or video  get_image()
   //  i am not sure how to declare
 };
-#endif  // CAMERA_HPP_
+#endif  // INCLUDE_CAMERA_HPP_

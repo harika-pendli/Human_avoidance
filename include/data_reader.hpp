@@ -10,10 +10,11 @@
  *
  */
 
-#ifndef INCLUDE_DATAREADER_HPP_
-#define INCLUDE_DATAREADER_HPP_
+#ifndef INCLUDE_DATA_READER_HPP_
+#define INCLUDE_DATA_READER_HPP_
 
 #include <iostream>
+#include <string>
 #include <opencv2/opencv.hpp>
 
 class DataReader {
@@ -36,13 +37,13 @@ class DataReader {
    * @brief Set the Imagepath object
    *
    */
-  void setImagepath(std::string);
+  void setImagepath(std::string*);
 
   /**
    * @brief Set the Videopath object
    *
    */
-  void setVideopath(std::string);
+  void setVideopath(std::string*);
   /**
    * @brief Get the Imagepath object
    *
@@ -76,4 +77,4 @@ class DataReader {
 
   ~DataReader();
 };
-#endif  // DATAREADER
+#endif  // INCLUDE_DATA_READER_HPP_

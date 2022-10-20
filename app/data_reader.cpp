@@ -17,9 +17,9 @@
  */
 // DataReader::DataReader();
 
-void DataReader::setImagepath(std::string path) { img_path = path; }
-void DataReader::setVideopath(std::string path) {
-  video_path = std::move(path);
+void DataReader::setImagepath(std::string *path) { img_path = *path; }
+void DataReader::setVideopath(std::string *path) {
+  video_path = *path;
 }
 
 std::string DataReader::getImagepath() { return img_path; }

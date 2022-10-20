@@ -9,17 +9,17 @@
  * @copyright MIT License (c) 2022 Shailesh Pranav Rajendran and Harika Pendli
  *
  */
-#ifndef INCLUDE_HUMAN_AVOIDANCE_HPP_
-#define INCLUDE_HUMAN_AVOIDANCE_HPP_
+#ifndef INCLUDE_HUMAN_DETECTOR_HPP_
+#define INCLUDE_HUMAN_DETECTOR_HPP_
 
 #include <array>
 #include <iostream>
 #include <string>
 #include <vector>
 
-#include "camera.hpp"
-#include "detect.hpp"
-#include "track.hpp"
+#include "../include/camera.hpp"
+#include "../include/detect.hpp"
+#include "../include/track.hpp"
 
 class HumanDetector {
   // private:
@@ -33,4 +33,4 @@ class HumanDetector {
       std::vector<std::vector<float>>);  // returns transformed coordinates and
                                          // distance of humans
 };
-#endif  // HUMAN_AVOIDANCE_HPP
+#endif  // INCLUDE_HUMAN_DETECTOR_HPP_

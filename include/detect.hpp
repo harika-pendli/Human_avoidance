@@ -30,10 +30,11 @@ class Detector {
   int num_humans;  // Total confident human objects detected
 
  public:
+  Detector();
   std::vector<std::array<float, 4>>
   detecting();  // function that takes a frame and detects
   std::vector<std::array<float, 3>>
   filter();  // function that returns list of humans above certain confidence
              // level
 };
-#endif  // DETECT_HPP_
+#endif  // INCLUDE_DETECT_HPP_

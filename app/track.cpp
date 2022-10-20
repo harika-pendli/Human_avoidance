@@ -16,6 +16,12 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
+Tracker::Tracker(){
+  SIZE = 0;
+  object_id = 0;
+  frame_id = 0;
+};
 /**
  * @brief class that tracks the objects from all frames of the video feed
  *
@@ -29,7 +35,7 @@
  * assigned new id
  */
 
-int Tracker::assign_id(std::vector<float> human_instance) {
+int Tracker::assign_id(std::vector<float> &human_instance) {
   // stub
   return 1;
 }
@@ -40,7 +46,7 @@ int Tracker::assign_id(std::vector<float> human_instance) {
  * @param track_id_instance
  * @return std::vector<float>
  */
-std::vector<float> Tracker::track(std::vector<float> track_id_instance) {
+std::vector<float> Tracker::track(std::vector<float> &track_id_instance) {
   // stub
   std::vector<float> vec;
   vec.push_back(1.11);

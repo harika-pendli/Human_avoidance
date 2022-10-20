@@ -17,8 +17,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
-//#include <Eigen/Dense>
-//#include <opencv2/opencv.hpp>
+
+// #include<Eigen/Dense>
+// #include<opencv2/opencv.hpp>
 
 #include "../include/camera.hpp"
 
@@ -34,7 +35,7 @@
 void Camera::set_intrinsic_camera_params(float para1, float para2, float para3,
                                          float para4, float para5) {
   std::cout << "Set intrinsic parameter matrix";
-};
+}
 
 /**
  * @brief Set the rotation camera params object

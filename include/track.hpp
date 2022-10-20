@@ -28,8 +28,9 @@ class Tracker {
   int object_id;
 
  public:
-  int assign_id(std::vector<float>);
+  Tracker();
+  int assign_id(std::vector<float>&);
   int frame_id;
-  std::vector<float> track(std::vector<float>);
+  std::vector<float> track(std::vector<float>&);
 };
-#endif  // TRACK_HPP_
+#endif  // INCLUDE_TRACK_HPP_

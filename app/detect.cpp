@@ -19,6 +19,9 @@
 #include <string>
 #include <vector>
 
+Detector::Detector(){
+  num_humans = 0;
+}
 /**
  * @brief detects humans in the frame with some confidence
  *
@@ -31,7 +34,6 @@ std::vector<std::array<float, 4>> Detector::detecting() {
 
   detections.push_back(arr);
   return detections;
-
 }  // function that takes a frame and detects
 
 /**
