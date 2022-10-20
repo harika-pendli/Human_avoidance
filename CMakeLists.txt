@@ -2,15 +2,14 @@ cmake_minimum_required(VERSION 3.2.1)
 project (Human_avoidance)
 
 # Add project cmake modules to path.
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
-
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 # We probably don't want this to run on every build.
 option(COVERAGE "Generate Coverage Data" OFF)
 
 if (COVERAGE)
     include(CodeCoverage)
     set(LCOV_REMOVE_EXTRA "'*vendor/*'")
-    setup_target_for_coverage(code_coverage test/cpp-test app/app coverage)
+    setup_target_for_coverage(code_coverage test/cpp-test app/shell-app coverage)
     set(COVERAGE_SRCS app/main.cpp include/Human_detector.hpp)
 
     SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
