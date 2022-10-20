@@ -1,42 +1,44 @@
 /**
  * @file camera.cpp
- * @author Harika Pendli (hpendli@umd.edu)
- * @brief 
+ * @author Harika Pendli (hpendli@umd.edu) and Shailesh Pranav Rajendran
+ * (spraj@umd.edu)
+ * @brief
  * @version 0.1
  * @date 2022-10-18
- * 
- * @copyright Copyright (c) 2022
- * 
+ *
+ * @copyright MIT License (c) 2022 Shailesh Pranav Rajendran and Harika Pendli
+ *
  */
 // TO DO:
+// add doxygen comment to Camera::set_intrinsic_camera_params
+// add doxygen comment about class
 
-    //add a function to start inputing frames or video  get_image()
-    // i am not sure how to declare 
-    // add doxygen comment to Camera::set_intrinsic_camera_params
-    //add doxygen comment about class 
-    // add MIT license
-
-
+#include <array>
 #include <iostream>
 #include <string>
 #include <vector>
-#include <array>
-#include <iostream>
 //#include <Eigen/Dense>
-//#include <opencv2/opencv.hpp> 
+//#include <opencv2/opencv.hpp>
 
-#include "include/camera.hpp"
+#include "../include/camera.hpp"
 
-
-
-void Camera::set_intrinsic_camera_params (float para1,float para2,float para3,float para4,float para5) {         
-        
-        std::cout<<"Set intrinsic parameter matrix";
+/**
+ * @brief
+ *
+ * @param para1
+ * @param para2
+ * @param para3
+ * @param para4
+ * @param para5
+ */
+void Camera::set_intrinsic_camera_params(float para1, float para2, float para3,
+                                         float para4, float para5) {
+  std::cout << "Set intrinsic parameter matrix";
 };
 
 /**
  * @brief Set the rotation camera params object
- * 
+ *
 
  * @param para1 rotation matrix r11 element
  * @param para2 rotation matrix r12 element
@@ -48,22 +50,20 @@ void Camera::set_intrinsic_camera_params (float para1,float para2,float para3,fl
  * @param para8 rotation matrix r32 element
  * @param para9 rotation matrix r33 element
  */
-void Camera::set_rotation_camera_params (float para1,float para2,float para3,float para4,float para5, float para6,float para7, float para8,float para9){
-    
-    std::cout<<"Set rotation parameters of extrinsic matrix";
-} 
+void Camera::set_rotation_camera_params(float para1, float para2, float para3,
+                                        float para4, float para5, float para6,
+                                        float para7, float para8, float para9) {
+  std::cout << "Set rotation parameters of extrinsic matrix";
+}
 
 /**
  * @brief Set the translation camera params object
- * 
+ *
  * @param para1 translation vector t1 element
  * @param para2 translation vector t2 element
  * @param para3 translation vector t3 element
  */
-void Camera::set_translation_camera_params (float para1,float para2,float para3) {
-
-    std::cout<<"Set translation parameters of extrinsic matrix";
-} //translation part of the extrinsic params matrix
-
-    
-
+void Camera::set_translation_camera_params(float para1, float para2,
+                                           float para3) {
+  std::cout << "Set translation parameters of extrinsic matrix";
+}  // translation part of the extrinsic params matrix
