@@ -19,7 +19,7 @@
 #include <string>
 #include <vector>
 
-Detector::Detector(){
+Detector::Detector() {
   num_humans = 0;
 }
 /**

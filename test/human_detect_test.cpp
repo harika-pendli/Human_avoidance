@@ -28,5 +28,5 @@ TEST(Driver, coord_trans) {
 }
 
 TEST(Driver, init) {
- EXPECT_NO_FATAL_FAILURE(ins.initialise());
+  EXPECT_NO_FATAL_FAILURE(ins.initialise());
 }

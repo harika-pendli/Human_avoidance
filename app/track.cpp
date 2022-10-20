@@ -17,11 +17,11 @@
 #include <string>
 #include <vector>
 
-Tracker::Tracker(){
+Tracker::Tracker() {
   SIZE = 0;
   object_id = 0;
   frame_id = 0;
-};
+}
 /**
  * @brief class that tracks the objects from all frames of the video feed
  *
