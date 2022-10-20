@@ -60,8 +60,7 @@ SOFTWARE.
 
 - [Sprint Review](https://docs.google.com/document/d/1Nb_psVTufyzcFsdD67MJTqQvALrAlez0QEYVcEus4a4/edit)
 
-
-
+- [Phase 1 Update Video](https://drive.google.com/file/d/1zdG5oJxihnf690Nj9lmH-NxazA3RiWn2/view?usp=sharing)
 ## Standard Build via command-line
 ```
 git clone --recursive https://github.com/shaileshpranav/Human_avoidance
