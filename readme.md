@@ -75,7 +75,7 @@ make
     ./test/cpp-test
 ## Run program:
 
-     ./app/shell-app
+     ./app/app
 
 
 ## Building for code coverage

@@ -17,6 +17,8 @@ jobs:
         run: |
           pip install --user cpp-coveralls
           sudo apt-get install -y -qq lcov
+      - name: install dependencies
+        run: sh dependencies.sh
       - name: build
         run: |
           export CXX=$COMPILER;
