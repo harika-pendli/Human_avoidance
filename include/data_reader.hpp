@@ -16,7 +16,9 @@
 #include <iostream>
 #include <string>
 #include <opencv2/opencv.hpp>
-
+/**
+ * @brief The class for processing the input data
+ */
 class DataReader {
  private:
   /**
@@ -32,6 +34,10 @@ class DataReader {
   std::string video_path;
 
  public:
+ /**
+  * @brief Construct a new Data Reader object
+  * 
+  */
   // DataReader();
   /**
    * @brief Set the Imagepath object
@@ -75,6 +81,10 @@ class DataReader {
    */
   cv::VideoCapture videoprocessor(cv::Mat frame, cv::VideoWriter video);
 
+/**
+ * @brief Destroy the Data Reader object
+ * 
+ */
   ~DataReader();
 };
 #endif  // INCLUDE_DATA_READER_HPP_

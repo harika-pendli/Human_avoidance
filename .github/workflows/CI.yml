@@ -13,12 +13,18 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v3
+
+      # Packages for coveralls
       - name: install packages
         run: |
           pip install --user cpp-coveralls
           sudo apt-get install -y -qq lcov
+      
+      # Install Dependencies
       - name: install dependencies
-        run: sh dependencies.sh
+        run: run: sudo apt-get install -y libeigen3-dev; sudo apt-get install libopencv-dev;sudo apt-get install libopencv-contrib-dev
+      
+      # Start build
       - name: build
         run: |
           export CXX=$COMPILER;
@@ -28,6 +34,7 @@ jobs:
         run: |
           make
           make code_coverage
+          
      # Upload coverage result to Coverage.io 
       - name: Upload result to Coveralls.io
         uses: coverallsapp/github-action@1.1.3

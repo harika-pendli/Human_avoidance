@@ -2,7 +2,7 @@
  * @file Human_detector.hpp
  * @author Harika Pendli (hpendli@umd.edu) and Shailesh Pranav Rajendran
  * (spraj@umd.edu)
- * @brief Driver class for all classes
+ * @brief Driver class for the project
  * @version 0.1
  * @date 2022-10-18
  *
@@ -21,6 +21,10 @@
 #include "../include/detect.hpp"
 #include "../include/track.hpp"
 
+/**
+ * @brief This class will be the driver class for the project
+ * 
+ */
 class HumanDetector {
   // private:
   // camera Camera;

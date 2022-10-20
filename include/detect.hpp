@@ -9,9 +9,6 @@
  * @copyright MIT License (c) 2022 Shailesh Pranav Rajendran and Harika Pendli
  *
  */
-
-// TO DO:
-
 #ifndef INCLUDE_DETECT_HPP_
 #define INCLUDE_DETECT_HPP_
 
@@ -21,7 +18,7 @@
 #include <vector>
 
 /**
- * @brief class that will contain implementation of the detection process for
+ * @brief This class that will contain implementation of the detection process for
  * each frame
  *
  */
