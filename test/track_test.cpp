@@ -11,8 +11,8 @@
 
 #include <gtest/gtest.h>
 
-#include <../include/track.hpp>
 #include <vector>
+#include <../include/track.hpp>
 
 Tracker tracking;
 

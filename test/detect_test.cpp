@@ -11,8 +11,8 @@
 
 #include <gtest/gtest.h>
 
-#include <../include/detect.hpp>
 #include <vector>
+#include <../include/detect.hpp>
 
 TEST(Detectingtest, detections) {
   Detector detect;
