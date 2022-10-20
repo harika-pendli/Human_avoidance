@@ -21,7 +21,6 @@
  * @brief class that tracks the objects from all frames of the video feed
  *
  */
-
 class Tracker {
  private:
   int SIZE;

@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <opencv2/opencv.hpp>
+
 /**
  * @brief The class for processing the input data
  */
