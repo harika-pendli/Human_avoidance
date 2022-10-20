@@ -44,13 +44,13 @@ class DataReader {
    * @brief Set the Imagepath object
    *
    */
-  void setImagepath(std::string*);
+  void setImagepath(const std::string*);
 
   /**
    * @brief Set the Videopath object
    *
    */
-  void setVideopath(std::string*);
+  void setVideopath(const std::string*);
   /**
    * @brief Get the Imagepath object
    *
