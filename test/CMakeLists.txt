@@ -9,7 +9,7 @@ add_executable(cpp-test
     human_detect_test.cpp
     camera_test.cpp
     # test_data_read.cpp
-    ../app/detect.cpp ../app/track.cpp ../app/human_detector.cpp ../app/camera.cpp
+    ../app/detect.cpp ../app/track.cpp ../app/Human_detector.cpp ../app/camera.cpp
     # ../app/data_reader.cpp
 )
 
