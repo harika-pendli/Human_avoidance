@@ -66,6 +66,14 @@ class DataReader {
   std::string getVideopath();
 
   /**
+   * @brief Get the Input dataType
+   * 
+   * @param parser 
+   * @return std::string 'Image', 'Video' or 'Error'
+   */
+  std::string getInputType(const cv::CommandLineParser parser);
+
+  /**
    * @brief A function for image preprocessing
    *
    * @param frame The input image

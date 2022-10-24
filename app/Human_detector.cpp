@@ -12,21 +12,32 @@
 
 #include "../include/Human_detector.hpp"
 
-#include <array>
-#include <iostream>
-#include <string>
-#include <vector>
-
-#include "../include/camera.hpp"
-#include "../include/detect.hpp"
-#include "../include/track.hpp"
-
 /**
- * @brief initialises instances of all classes and sets the detector in motion
- *
+ * @brief Constructor for Human Detector class
+ * 
  */
-void HumanDetector::initialise() {
-  std::cout << ("HUman detector and tracker initialised");
+HumanDetector::HumanDetector() {
+  inputHeight = 640;
+  inputWidth = 640;
+  nmsThreshold = 0.4;
+  confidenceThreshold = 0.75;
+  averageHeight = 175;
+}
+
+void HumanDetector::detect(cv::CommandLineParse parse)
+{
+  
+  std::vector<std::string> classes;
+
+  ModelConfig yolov3;
+  classes = yolov3.getClasses();
+  
+  cv::dnn::Net net = cv::dnn::readNetFromDarknet(yolov3.getConfig(), yolov3.getWeights(),  
+        net.setPreferableBackend(cv::dnn::DNN_BACKEND_OPENCV);
+        net.setPreferableTarget(cv::dnn::DNN_TARGET_CPU);
+
+  cv::VideoCapture cap;
+  cv::Mat frame,blob;
 }
 
 /**

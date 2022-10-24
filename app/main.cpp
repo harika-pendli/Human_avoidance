@@ -11,5 +11,28 @@
  */
 
 #include <iostream>
+#include <Human_detector.hpp>
+#include <opencv2/opencv.hpp>
 
-int main() { return 0; }
+const char* keys = 
+        "{help h usage ? | | Usage examples: "
+        "\n\t\t./detect.out --image = image.jpg"
+        "\n\t\t./detect.out --video = video.mp4"
+        "{image img||input image}"
+        "{video vid||input video}";
+
+int main(int argc, char** argv) { 
+    HumanDetector detection;
+
+    cv::CommandLineParser parser(argc, argv, keys);
+    if (parser.has("help")) {
+        parser.printMessage();
+        return 0;
+    }
+    /**
+     * @brief Starting the detection algorithm
+     * 
+     */
+    detection.detect(parser);
+    return 0;
+}

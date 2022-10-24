@@ -16,8 +16,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <opencv2/opencv.hpp>
 
-#include "../include/camera.hpp"
+#include "../include/modelConfig.hpp"
 #include "../include/detect.hpp"
 #include "../include/track.hpp"
 
@@ -26,13 +27,48 @@
  * 
  */
 class HumanDetector {
-  // private:
-  // camera Camera;
-  // detect Detector;
-  // track Tracker;
+  private:
+    /**
+     * @brief private variable for width of image
+     * 
+     */
+    unsigned int inputWidth;
+    /**
+     * @brief private variable for height of image
+     * 
+     */
+    unsigned int inputHeight;
+    /**
+     * @brief private variable for assumed height of a person
+     * 
+     */
+    unsigned int averageHeight;
+    /**
+     * @brief private variable for nmsThreshold
+     * 
+     */
+    float nmsThreshold;
+    /**
+     * @brief private variable for confidenceThreshold
+     * 
+     */
+    float confidenceThreshold;
+
 
  public:
-  void initialise();
+ /**
+  * @brief Constructor for Human Detector object
+  * 
+  */
+  HumanDetector();
+  /**
+   * @brief 
+   * 
+   * @param parse 
+   */
+  void detect(cv::CommandLineParse parse);
+
+
   std::vector<std::vector<float>> camera_robot_array(
       std::vector<std::vector<float>>);  // returns transformed coordinates and
                                          // distance of humans
