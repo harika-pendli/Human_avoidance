@@ -24,8 +24,10 @@ HumanDetector::HumanDetector() {
   averageHeight = 175;
 }
 
-void drawPred(int classId, float conf, int left, int top, int right, int bottom, cv::Mat& frame,std::vector<std::string> classes)
+void HumanDetector::drawBox(int classId, float conf, int left, int top, int right, int bottom, 
+              cv::Mat& frame, std::vector<std::string> classes)
 {
+    if (classId == 0) {
     //Draw a rectangle displaying the bounding box
     rectangle(frame, cv::Point(left, top), cv::Point(right, bottom), cv::Scalar(255, 178, 50), 3);
      
@@ -43,9 +45,10 @@ void drawPred(int classId, float conf, int left, int top, int right, int bottom,
     top = std::max(top, labelSize.height);
     rectangle(frame, cv::Point(left, top - round(1.5*labelSize.height)), cv::Point(left + round(1.5*labelSize.width), top + baseLine), cv::Scalar(255, 255, 255), cv::FILLED);
     putText(frame, label, cv::Point(left, top), cv::FONT_HERSHEY_SIMPLEX, 0.75, cv::Scalar(0,0,0),1);
+    }
 }
 
-std::vector<std::string> getOutputsNames(const cv::dnn::Net& net)
+std::vector<std::string> HumanDetector::getOutputsNames(const cv::dnn::Net& net)
 {
     static std::vector<std::string> names;
     if (names.empty())
@@ -64,7 +67,7 @@ std::vector<std::string> getOutputsNames(const cv::dnn::Net& net)
     return names;
 }
 
-void HumanDetector::postprocess(cv::Mat& frame, const std::vector<cv::Mat>& outs,
+void HumanDetector::rmOverlap(cv::Mat& frame, const std::vector<cv::Mat>& outs,
                       const std::vector<std::string> &classes)
 {
     std::vector<int> classIds;
@@ -108,14 +111,13 @@ void HumanDetector::postprocess(cv::Mat& frame, const std::vector<cv::Mat>& outs
     {
         int idx = indices[i];
         cv::Rect box = boxes[idx];
-        drawPred(classIds[idx], confidences[idx], box.x, box.y,
+        drawBox(classIds[idx], confidences[idx], box.x, box.y,
                  box.x + box.width, box.y + box.height, frame, classes);
     }
 }
 
 void HumanDetector::detect(cv::CommandLineParser parser)
 {
-  
   std::vector<std::string> classes;
 
   ModelConfig yolov3;
@@ -123,21 +125,21 @@ void HumanDetector::detect(cv::CommandLineParser parser)
   classes = yolov3.getClasses();
   
   cv::dnn::Net net = cv::dnn::readNetFromDarknet(yolov3.getConfig(), yolov3.getWeights());  
-        net.setPreferableBackend(cv::dnn::DNN_BACKEND_OPENCV);
-        net.setPreferableTarget(cv::dnn::DNN_TARGET_CPU);
+  net.setPreferableBackend(cv::dnn::DNN_BACKEND_OPENCV);
+  net.setPreferableTarget(cv::dnn::DNN_TARGET_CPU);
 
   cv::VideoCapture cap;
   cv::VideoWriter video;
   cv::Mat frame,blob;
 
   try{
-    std::string inputType;
-    std::string inputPath = input.getInput(parser, &inputType);
-    if (inputType == "image") {
+    std::string input_Type="";
+    std::string inputPath = input.getInput(parser, input_Type);
+    if (input_Type == "image") {
       input.setImagepath(inputPath);
       cap = input.imgProcessor('r',frame);
     }
-    if (inputType == "video") {
+    if (input_Type == "video") {
       input.setVideopath(inputPath);
       cap = input.videoProcessor('r', frame, video);
       input.setOutputWidth(cap.get(cv::CAP_PROP_FRAME_WIDTH));
@@ -148,7 +150,6 @@ void HumanDetector::detect(cv::CommandLineParser parser)
   }
   catch(...) {
     std::cout << "Could not open the input image/video stream" << std::endl;
-    // return 0;
   }
 
   while(cv::waitKey(1) < 0) {
@@ -156,8 +157,8 @@ void HumanDetector::detect(cv::CommandLineParser parser)
  
     // Stop the program if reached end of video
     if (frame.empty()) {
-        std::cout << "Done processing !!!" << std::endl;
-        std::cout << "Output file in Output Folder is stored as Result.avi" << std::endl;
+        std::cout << "Detection Completed" << std::endl;
+        std::cout << "Output file is stored in Output Folder" << std::endl;
         cv::waitKey(3000);
         break;
     }
@@ -173,7 +174,7 @@ void HumanDetector::detect(cv::CommandLineParser parser)
     net.forward(outs, getOutputsNames(net));
          
     // Remove the bounding boxes with low confidence
-    postprocess(frame, outs, classes);
+    rmOverlap(frame, outs, classes);
          
     // Put efficiency information.
     std::vector<double> layersTimes;

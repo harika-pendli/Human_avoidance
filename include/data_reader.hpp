@@ -109,8 +109,7 @@ class DataReader {
    */
   cv::VideoCapture videoProcessor(char, cv::Mat frame, cv::VideoWriter video);
 
-
-  std::string getInput(cv::CommandLineParser, std::string*);
+  std::string getInput(cv::CommandLineParser, std::string&);
 /**
  * @brief Destroy the Data Reader object
  * 

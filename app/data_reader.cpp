@@ -16,23 +16,27 @@
  *
  */
 DataReader::DataReader(){
-};
+}
 
 void DataReader::setImagepath(std::string path) { img_path = path; }
 void DataReader::setVideopath(std::string path) {
   video_path = path;
 }
 
-std::string DataReader::getInput(cv::CommandLineParser parser, std::string* type){
+std::string DataReader::getInput(cv::CommandLineParser parser, std::string &input_Type){
   if(parser.has("image") || parser.has("img")){
     img_path = parser.get<std::string>("image");
-    *type = "image";
+    input_Type = "image";
     return img_path;
   }
   if(parser.has("video") || parser.has("vid")){
     img_path = parser.get<std::string>("video");
-    *type = "video";
+    input_Type = "video";
     return video_path;
+  }
+  else {
+    std::cout<<"No input path is provided"<<std::endl;
+    return "Error in path";
   }
 }
 
@@ -66,8 +70,10 @@ cv::VideoCapture DataReader::imgProcessor(const char rw, cv::Mat frame) {
     cv::imwrite("../output/Result.jpg",frame);
     return cv::VideoCapture();
   }
-  else
-    std::cout<<"Error in imgprocessor" ;
+  else {
+    std::cout<<"Error in image processor"<<std::endl;
+    return cv::VideoCapture();
+  }
 }
 
 cv::VideoCapture DataReader::videoProcessor(char rw, cv::Mat frame, cv::VideoWriter out) {
@@ -80,6 +86,11 @@ cv::VideoCapture DataReader::videoProcessor(char rw, cv::Mat frame, cv::VideoWri
     cv::Mat newFrame;
     cv::resize(frame, newFrame, cv::Size(getOutputWidth(), getOutputHeight()));
     out.write(newFrame);
+    return cv::VideoCapture();
+  }
+  else
+  {
+    std::cout<<"Error in video processor"<<std::endl;
     return cv::VideoCapture();
   }
 }

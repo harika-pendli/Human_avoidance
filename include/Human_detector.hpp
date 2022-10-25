@@ -63,8 +63,27 @@ class HumanDetector {
   */
   HumanDetector();
 
-  void postprocess(cv::Mat&, const std::vector<cv::Mat>&,
+/**
+ * @brief 
+ * 
+ */
+  void rmOverlap(cv::Mat&, const std::vector<cv::Mat>&,
                       const std::vector<std::string>&);
+
+
+/**
+ * @brief 
+ * 
+ */
+  void drawBox(int, float, int, int, int, int, 
+              cv::Mat&, std::vector<std::string>);
+
+/**
+ * @brief Get the Outputs Layer Names 
+ * 
+ * @return std::vector<std::string> 
+ */
+  std::vector<std::string> getOutputsNames(const cv::dnn::Net&);
   /**
    * @brief 
    * 
