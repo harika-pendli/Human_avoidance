@@ -1,15 +1,15 @@
-cpplint $( find . -name '*.cpp' -or -name '*.hpp' | grep -vE -e "^./build/" -e "^./vendor/" )  
+cpplint $( find . -name '*.cpp' -or -name '*.hpp' | grep -vE -e "^./build/" -e "^./vendor/" )
 Done processing ./app/Human_detector.cpp
-Done processing ./app/camera.cpp
 Done processing ./app/data_reader.cpp
-Done processing ./app/detect.cpp
 Done processing ./app/main.cpp
+Done processing ./app/modelConfig.cpp
 Done processing ./app/track.cpp
+Done processing ./app/transformation.cpp
 Done processing ./include/Human_detector.hpp
-Done processing ./include/camera.hpp
 Done processing ./include/data_reader.hpp
-Done processing ./include/detect.hpp
+Done processing ./include/modelConfig.hpp
 Done processing ./include/track.hpp
+Done processing ./include/transformation.hpp
 Done processing ./test/camera_test.cpp
 Done processing ./test/detect_test.cpp
 Done processing ./test/human_detect_test.cpp
