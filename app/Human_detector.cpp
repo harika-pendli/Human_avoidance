@@ -21,11 +21,10 @@ HumanDetector::HumanDetector() {
   inputWidth = 640;
   nmsThreshold = 0.4;
   confidenceThreshold = 0.75;
-  averageHeight = 175;
 }
 
 void HumanDetector::drawBox(int classId, float conf, int left, int top, int right, int bottom, 
-              cv::Mat& frame, std::vector<std::string> classes)
+              cv::Mat& frame, std::vector<std::string> classes, unsigned int pid, float z)
 {
     if (classId == 0) {
     //Draw a rectangle displaying the bounding box
@@ -36,7 +35,7 @@ void HumanDetector::drawBox(int classId, float conf, int left, int top, int righ
     if (!classes.empty())
     {
         CV_Assert(classId < (int)classes.size());
-        label = classes[classId] + ":" + label;
+        label = "Distance: " + std::to_string(z) + " ID:"+ std::to_string(pid);
     }
      
     //Display the label at the top of the bounding box
@@ -73,6 +72,7 @@ void HumanDetector::rmOverlap(cv::Mat& frame, const std::vector<cv::Mat>& outs,
     std::vector<int> classIds;
     std::vector<float> confidences;
     std::vector<cv::Rect> boxes;
+    Transform transform;
      
     for (size_t i = 0; i < outs.size(); ++i)
     {
@@ -107,12 +107,15 @@ void HumanDetector::rmOverlap(cv::Mat& frame, const std::vector<cv::Mat>& outs,
     // lower confidences
     std::vector<int> indices;
     cv::dnn::NMSBoxes(boxes, confidences, confidenceThreshold, nmsThreshold, indices);
-    for (size_t i = 0; i < indices.size(); ++i)
+    unsigned int personid = 1;
+    for (auto idx : indices)
     {
-        int idx = indices[i];
         cv::Rect box = boxes[idx];
+        float z_axis = transform.calculate_distance(box.height, frame.rows);
         drawBox(classIds[idx], confidences[idx], box.x, box.y,
-                 box.x + box.width, box.y + box.height, frame, classes);
+                 box.x + box.width, box.y + box.height, frame, classes, personid, z_axis);
+        transform.camera_robot_array(z_axis, box, frame);
+        personid++;
     }
 }
 
@@ -144,7 +147,7 @@ void HumanDetector::detect(cv::CommandLineParser parser)
       cap = input.videoProcessor('r', frame, video);
       input.setOutputWidth(cap.get(cv::CAP_PROP_FRAME_WIDTH));
       input.setOutputHeight(cap.get(cv::CAP_PROP_FRAME_HEIGHT));
-      video.open("../output/Result.avi", cv::VideoWriter::fourcc('M', 'J', 'P', 'G'),
+      video.open("../output/Result.mp4", cv::VideoWriter::fourcc('a', 'v', 'c', '1') ,
             24, cv::Size(input.getOutputWidth(), input.getOutputHeight()), true);
     }
   }
@@ -190,27 +193,19 @@ void HumanDetector::detect(cv::CommandLineParser parser)
     // Write the frame with the detection boxes
     cv::Mat detectedFrame;
     frame.convertTo(detectedFrame, CV_8U);
-    if (parser.has("image")) input.imgProcessor('w',detectedFrame);
-    else input.videoProcessor('w',detectedFrame,video);
+    if (parser.has("image")) 
+      input.imgProcessor('w',detectedFrame);
+    else 
+      input.videoProcessor('w',detectedFrame,video);
+
+    static const std::string Window_name = " Human detection";
+    namedWindow(Window_name, cv::WINDOW_NORMAL);
+    imshow(Window_name, frame);
+    if (parser.has("image")) {
+      cv::waitKey(3000);
+    }
   }
 
   cap.release();
   if (parser.has("video")) video.release();
 }
-
-/**
- * @brief transforms the detected human coordinates into robot coordinate system
- * and displays
- *
- * @return std::vector<std::vector<float>>
- */
-std::vector<std::vector<float>> HumanDetector::camera_robot_array(
-    std::vector<std::vector<float>>) {
-  // stub
-  std::vector<std::vector<float>> out;
-  std::vector<float> in_1;
-  in_1.push_back(1.11);
-  in_1.push_back(1.22);
-  out.push_back(in_1);
-  return out;
-}  // returns transformed coordinates and distance of humans

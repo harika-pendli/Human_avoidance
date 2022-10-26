@@ -19,9 +19,9 @@
 #include <opencv2/opencv.hpp>
 
 #include "../include/modelConfig.hpp"
-#include "../include/detect.hpp"
 #include "../include/track.hpp"
 #include "../include/data_reader.hpp"
+#include "../include/transformation.hpp"
 
 /**
  * @brief This class will be the driver class for the project
@@ -39,11 +39,6 @@ class HumanDetector {
      * 
      */
     unsigned int inputHeight;
-    /**
-     * @brief private variable for assumed height of a person
-     * 
-     */
-    unsigned int averageHeight;
     /**
      * @brief private variable for nmsThreshold
      * 
@@ -64,7 +59,7 @@ class HumanDetector {
   HumanDetector();
 
 /**
- * @brief 
+ * @brief Method to remove overlap boxes with lower confidence
  * 
  */
   void rmOverlap(cv::Mat&, const std::vector<cv::Mat>&,
@@ -72,11 +67,11 @@ class HumanDetector {
 
 
 /**
- * @brief 
+ * @brief Method to draw a bounding box around the person
  * 
  */
   void drawBox(int, float, int, int, int, int, 
-              cv::Mat&, std::vector<std::string>);
+              cv::Mat&, std::vector<std::string>, unsigned int, float);
 
 /**
  * @brief Get the Outputs Layer Names 
@@ -85,15 +80,11 @@ class HumanDetector {
  */
   std::vector<std::string> getOutputsNames(const cv::dnn::Net&);
   /**
-   * @brief 
+   * @brief Function to detect the humans
    * 
-   * @param parse 
+   * @param parse input parser
    */
-  void detect(cv::CommandLineParser parse);
+  void detect(cv::CommandLineParser);
 
-
-  std::vector<std::vector<float>> camera_robot_array(
-      std::vector<std::vector<float>>);  // returns transformed coordinates and
-                                         // distance of humans
 };
 #endif  // INCLUDE_HUMAN_DETECTOR_HPP_

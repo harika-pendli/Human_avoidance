@@ -19,9 +19,7 @@ DataReader::DataReader(){
 }
 
 void DataReader::setImagepath(std::string path) { img_path = path; }
-void DataReader::setVideopath(std::string path) {
-  video_path = path;
-}
+void DataReader::setVideopath(std::string path) { video_path = path; }
 
 std::string DataReader::getInput(cv::CommandLineParser parser, std::string &input_Type){
   if(parser.has("image") || parser.has("img")){
@@ -30,7 +28,7 @@ std::string DataReader::getInput(cv::CommandLineParser parser, std::string &inpu
     return img_path;
   }
   if(parser.has("video") || parser.has("vid")){
-    img_path = parser.get<std::string>("video");
+    video_path = parser.get<std::string>("video");
     input_Type = "video";
     return video_path;
   }
