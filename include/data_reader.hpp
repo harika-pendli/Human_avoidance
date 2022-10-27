@@ -18,7 +18,7 @@
 #include <opencv2/opencv.hpp>
 
 /**
- * @brief The class for processing the input data
+ * @brief The class for processing the input data before feeding to the detection process
  */
 class DataReader {
  private:
@@ -33,9 +33,18 @@ class DataReader {
    *
    */
   std::string video_path;
-
+  
+  /**
+   * @brief private variable to store output width of the image
+   * 
+   */
   int outputWidth;
 
+
+  /**
+  * @brief private variable to store output Height of the image  
+  * 
+  */
   int outputHeight;
 
  public:
@@ -69,12 +78,34 @@ class DataReader {
    */
   std::string getVideopath();
 
+  /**
+   * @brief Get the Output Width object
+   * 
+   * @return int 
+   */
   int getOutputWidth();
+
+  /**
+   * @brief Get the Output Height object
+   * 
+   * @return int 
+   */
 
   int getOutputHeight();
 
+  /**
+   * @brief Set the Output Height object
+   * 
+   * @param height 
+   */
   void setOutputHeight(int height);
 
+
+  /**
+   * @brief Set the Output Width object
+   * 
+   * @param width 
+   */
   void setOutputWidth(int width);
 
   /**
@@ -110,6 +141,11 @@ class DataReader {
    */
   cv::VideoCapture videoProcessor(char, cv::Mat frame, cv::VideoWriter video);
 
+  /**
+   * @brief Get the Input object
+   * 
+   * @return std::string 
+   */
   std::string getInput(cv::CommandLineParser, std::string&);
   /**
    * @brief Destroy the Data Reader object
