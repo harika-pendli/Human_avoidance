@@ -36,6 +36,11 @@
 },
 {
   "directory": "/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/build/test",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/test/../vendor/googletest/googletest/include -I/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/include -I/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/vendor/googletest/googletest/include -isystem /opt/homebrew/Cellar/opencv/4.6.0_1/include/opencv4 -Wall -Wextra -Wpedantic -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14 -o CMakeFiles/cpp-test.dir/track_test.cpp.o -c /Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/test/track_test.cpp",
+  "file": "/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/test/track_test.cpp"
+},
+{
+  "directory": "/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/build/test",
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/test/../vendor/googletest/googletest/include -I/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/include -I/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/vendor/googletest/googletest/include -isystem /opt/homebrew/Cellar/opencv/4.6.0_1/include/opencv4 -Wall -Wextra -Wpedantic -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++14 -o CMakeFiles/cpp-test.dir/human_detect_test.cpp.o -c /Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/test/human_detect_test.cpp",
   "file": "/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/test/human_detect_test.cpp"
 },

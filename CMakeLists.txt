@@ -10,7 +10,7 @@ if (COVERAGE)
     include(CodeCoverage)
     set(LCOV_REMOVE_EXTRA "'*vendor/*'")
     setup_target_for_coverage(code_coverage test/cpp-test coverage)
-    set(COVERAGE_SRCS app/main.cpp app/transformation.cpp app/Human_detector.cpp app/modelConfig.cpp app/data_reader.cpp include/data_reader.hpp include/Human_detector.hpp include/transformation.hpp include/modelConfig.hpp)
+    set(COVERAGE_SRCS app/main.cpp app/transformation.cpp app/Human_detector.cpp app/modelConfig.cpp app/data_reader.cpp include/data_reader.hpp include/Human_detector.hpp include/transformation.hpp include/modelConfig.hpp include/track.hpp)
 
     SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
     SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
