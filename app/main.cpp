@@ -16,8 +16,8 @@
 
 const char* keys =
     "{help h usage ? | | Usage examples: "
-    "\n\t\t./detect.out --image=1.png"
-    "\n\t\t./detect.out --video=video.mp4 }"
+    "\n\t\t./app/app --image=../input/1.png"
+    "\n\t\t./app/app --video=../input/video.mp4}"
     "{image img||input image}"
     "{video vid||input video}";
 

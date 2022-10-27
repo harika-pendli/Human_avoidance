@@ -52,7 +52,7 @@ std::string DataReader::getImagepath() { return img_path; }
 
 std::string DataReader::getVideopath() { return video_path; }
 
-cv::VideoCapture DataReader::imgProcessor(const char rw, cv::Mat frame) {
+cv::VideoCapture DataReader::imgProcessor(char rw, cv::Mat frame) {
   if (rw == 'r') {
     cv::VideoCapture cap;
     cap.open(img_path);

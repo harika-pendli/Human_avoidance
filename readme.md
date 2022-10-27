@@ -79,11 +79,11 @@ make
 ## Run program:
 - For Image
 ```
-./app/shell-app --image=../input/1.png
+./app/app --image=../input/1.png
 ```
 - For video
 ``` 
-./app/shell-app --video=../input/video.mp4
+./app/app --video=../input/video.mp4
 ```
 
 ## Building for code coverage

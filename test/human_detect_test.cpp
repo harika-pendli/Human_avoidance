@@ -12,21 +12,17 @@
 #include <gtest/gtest.h>
 
 #include <vector>
+#include <opencv2/opencv.hpp>
 #include <../include/Human_detector.hpp>
 
 HumanDetector ins;
-
-TEST(Driver, coord_trans) {
-  std::vector<std::vector<float>> out;
-  std::vector<float> in_1;
-  in_1.push_back(1.11);
-  in_1.push_back(1.22);
-  out.push_back(in_1);
-  std::vector<std::vector<float>> a;
-
-  EXPECT_EQ(ins.camera_robot_array(a), out);
+const char* keys =
+    "{image img||input image}"
+    "{video vid||input video}";
+int argc = 0;
+const char* argv = "";
+TEST(Driver, detect) {
+  cv::CommandLineParser parser(argc, &argv, keys);
+  EXPECT_NO_FATAL_FAILURE(ins.detect(parser));
 }
 
-TEST(Driver, init) {
-  EXPECT_NO_FATAL_FAILURE(ins.initialise());
-}

@@ -1,22 +1,19 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/harika/ENPM808x/midterm/Human_avoidance/app/Human_detector.cpp" "/home/harika/ENPM808x/midterm/Human_avoidance/build/app/CMakeFiles/shell-app.dir/Human_detector.cpp.o"
-  "/home/harika/ENPM808x/midterm/Human_avoidance/app/data_reader.cpp" "/home/harika/ENPM808x/midterm/Human_avoidance/build/app/CMakeFiles/shell-app.dir/data_reader.cpp.o"
-  "/home/harika/ENPM808x/midterm/Human_avoidance/app/main.cpp" "/home/harika/ENPM808x/midterm/Human_avoidance/build/app/CMakeFiles/shell-app.dir/main.cpp.o"
-  "/home/harika/ENPM808x/midterm/Human_avoidance/app/modelConfig.cpp" "/home/harika/ENPM808x/midterm/Human_avoidance/build/app/CMakeFiles/shell-app.dir/modelConfig.cpp.o"
-  "/home/harika/ENPM808x/midterm/Human_avoidance/app/track.cpp" "/home/harika/ENPM808x/midterm/Human_avoidance/build/app/CMakeFiles/shell-app.dir/track.cpp.o"
-  "/home/harika/ENPM808x/midterm/Human_avoidance/app/transformation.cpp" "/home/harika/ENPM808x/midterm/Human_avoidance/build/app/CMakeFiles/shell-app.dir/transformation.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../include"
-  "/usr/include/opencv4"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/app/Human_detector.cpp" "app/CMakeFiles/shell-app.dir/Human_detector.cpp.o" "gcc" "app/CMakeFiles/shell-app.dir/Human_detector.cpp.o.d"
+  "/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/app/data_reader.cpp" "app/CMakeFiles/shell-app.dir/data_reader.cpp.o" "gcc" "app/CMakeFiles/shell-app.dir/data_reader.cpp.o.d"
+  "/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/app/main.cpp" "app/CMakeFiles/shell-app.dir/main.cpp.o" "gcc" "app/CMakeFiles/shell-app.dir/main.cpp.o.d"
+  "/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/app/modelConfig.cpp" "app/CMakeFiles/shell-app.dir/modelConfig.cpp.o" "gcc" "app/CMakeFiles/shell-app.dir/modelConfig.cpp.o.d"
+  "/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/app/track.cpp" "app/CMakeFiles/shell-app.dir/track.cpp.o" "gcc" "app/CMakeFiles/shell-app.dir/track.cpp.o.d"
+  "/Users/shailesh/Desktop/College/Fall_22/808X/human_avoidance/app/transformation.cpp" "app/CMakeFiles/shell-app.dir/transformation.cpp.o" "gcc" "app/CMakeFiles/shell-app.dir/transformation.cpp.o.d"
   )
 
 # Targets to which this target links.
