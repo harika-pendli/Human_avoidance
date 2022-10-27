@@ -39,7 +39,7 @@ void Transform::camera_robot_array(float z, cv::Rect box, cv::Mat frame) {
       (sensor_w * ((box.x + box.width / 2) - (frame.cols / 2))) / frame.rows;
   double y =
       (sensor_h * ((box.y + box.height / 2) - (frame.rows / 2))) / frame.cols;
-  std::vector<double> out;
+  std::vector<float> out;
   pos.push_back(x);
   pos.push_back(y);
   pos.push_back(z);
@@ -54,11 +54,6 @@ void Transform::camera_robot_array(float z, cv::Rect box, cv::Mat frame) {
     res = 0;
   }
   out.pop_back();
-  std::cout << "Position in meters: " << std::endl;
-  for (auto p : out) {
-    std::cout << p << "\t";
-  }
-  std::cout << std::endl;
 }  // returns transformed coordinates and distance of humans
 
 Transform::~Transform() {}

@@ -61,6 +61,10 @@ SOFTWARE.
 - [Sprint Review](https://docs.google.com/document/d/1Nb_psVTufyzcFsdD67MJTqQvALrAlez0QEYVcEus4a4/edit)
 
 - [Phase 1 Update Video](https://drive.google.com/file/d/1zdG5oJxihnf690Nj9lmH-NxazA3RiWn2/view?usp=sharing)
+
+## Demo
+<img src="output/Result.gif">
+
 ## Standard Build via command-line
 ```
 git clone --recursive https://github.com/shaileshpranav/Human_avoidance
@@ -73,9 +77,14 @@ make
 
     ./test/cpp-test
 ## Run program:
-
-     ./app/app
-
+- For Image
+```
+./app/shell-app --image=../input/1.png
+```
+- For video
+``` 
+./app/shell-app --video=../input/video.mp4
+```
 
 ## Building for code coverage
 ```
@@ -111,4 +120,11 @@ cpplint "FIlename.cpp"
 - cppCheck
 ```
 cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" )
+```
+## Running Doxygen
+```
+sudo apt-install doxywizard
+run doxywizard
+source it to ENPM808X_Midterm_Manipulator_IKSolver/
+run the doxygen
 ```
