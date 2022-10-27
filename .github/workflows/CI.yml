@@ -26,9 +26,7 @@ jobs:
       
       # Download Weights
       - name: Yolov3 Weights
-        run: |
-              cd input/
-              sh script.sh && cd ..
+        run:  sh script.sh
               
       # Start build
       - name: build
