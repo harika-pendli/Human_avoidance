@@ -65,11 +65,21 @@ SOFTWARE.
 ## Demo
 <img src="output/Result.gif">
 
-## Design andDevelopment process
+## Design and Development process
 
 We made use of ESC methodology for the initial design process which is by extraction of significant concepts (ESC). We have identified the classes of the future program and their responsibilities. The class relations have been explained through UML class diagrams which cn be found in the [UML revised folder](https://github.com/harika-pendli/Human_avoidance/blob/dev2/uml/revised/UML_final.png)
 
 Our software team worked on this project through iterative software evolution and service processes. We engaged in Agile Iterative Development Process (AIP) through Test-Driven Development during the entire project period. Being a team of two programmers, we have decided to adopt pair programming and switch roles as navigator and drive as and when necessary.
+
+## Algorithm and methodology
+
+
+The perception pipeline flows as follows: command parser in data loader classes parses the arguments to retrieve the input to the pipeline (image/video), which then goes to the Human detector class which acts like a driver class. Here the yolo model config class and the transformation class intervenes to detect humans and get the depth or the distance of the humans from the camera respectively. We also have a Tracking stub class which we aim to update and release this functionality in the next version 0.02.
+
+First, the class Human detector is initialized, which in turn initializes, the other two classes namely, the modelConfig class, and the data loader class. Here detection takes place for each frame (if provided with video input) or an image based on the pre-trained [YOLOv3 model](https://pjreddie.com/darknet/yolo/). This detection is then passed to the transformation class where the x,y,z coordinate in the robot frame is calculated and the y-coordinate (depth) or the distance of the person from the robot is calculated (transformation from camera frame to robot reference frame) and shown on the image or video output. Currently we have made a basic tracker system but we plan to release it in the next build.
+
+For the unimplemented tracker class, we plan to do the following: 
+The updated coordinates along with the frame will be sent to the tracker function of the Tracker class where detection and tracking will be managed by the [DeepSORT](https://github.com/nwojke/deep_sort) deeplearning model. Here the detected objects are assigned unique ids. This id along with the frame id as well as the coordinate of the object in the camera frame is saved in an array. This process is repeated until all the image frames are completed.
 
 ## Standard Build via command-line
 ```
