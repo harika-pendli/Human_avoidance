@@ -23,8 +23,6 @@ TEST(TestSetGet, test_classs) {
     while (std::getline(ifs, yolo_classes)) {
         class_n.push_back(yolo_classes);
     }
-    for (auto p:class_n)
-        std::cout<<p;
     EXPECT_EQ(model.getClasses(), class_n);
 }
 

@@ -21,7 +21,7 @@ TEST(TestSetGet, test_dist) {
 }
 
 TEST(TestSetGet, test_frame) {
-    float z;
+    float z = 1.75;
     cv::Rect box;
     cv::Mat frame;
     EXPECT_NO_FATAL_FAILURE(t.camera_robot_array(z, box,frame));
