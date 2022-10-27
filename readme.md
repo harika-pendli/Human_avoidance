@@ -65,6 +65,12 @@ SOFTWARE.
 ## Demo
 <img src="output/Result.gif">
 
+## Design andDevelopment process
+
+We made use of ESC methodology for the initial design process which is by extraction of significant concepts (ESC). We have identified the classes of the future program and their responsibilities. The class relations have been explained through UML class diagrams which cn be found in the [UML revised folder](https://github.com/harika-pendli/Human_avoidance/blob/dev2/uml/revised/UML_final.png)
+
+Our software team worked on this project through iterative software evolution and service processes. We engaged in Agile Iterative Development Process (AIP) through Test-Driven Development during the entire project period. Being a team of two programmers, we have decided to adopt pair programming and switch roles as navigator and drive as and when necessary.
+
 ## Standard Build via command-line
 ```
 git clone --recursive https://github.com/shaileshpranav/Human_avoidance
