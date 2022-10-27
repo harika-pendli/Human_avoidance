@@ -112,12 +112,17 @@ make code_coverage
 
 ##  Install Dependencies
 
--Ubuntu 20.04(LTS)
--CMake
--OpenCV
--Github CI
--Coveralls
--Git
+- Ubuntu 20.04(LTS)
+
+- CMake
+
+- OpenCV
+
+- Github CI
+
+- Coveralls
+
+- Git
 ```
 sh dependencies.sh
 ```
