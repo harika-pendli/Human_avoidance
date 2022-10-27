@@ -81,6 +81,12 @@ First, the class Human detector is initialized, which in turn initializes, the o
 For the unimplemented tracker class, we plan to do the following: 
 The updated coordinates along with the frame will be sent to the tracker function of the Tracker class where detection and tracking will be managed by the [DeepSORT](https://github.com/nwojke/deep_sort) deeplearning model. Here the detected objects are assigned unique ids. This id along with the frame id as well as the coordinate of the object in the camera frame is saved in an array. This process is repeated until all the image frames are completed.
 
+## Known Issues/Risks 
+
+- Missed detection: It may happen that the model sometimes misses some human objects during detection. In such a case, deploying more than one and different models can be viable.
+
+- Duplicate detections: It can happen due to low lighting or bad lighting conditions or bas resolution and quality of the video or the image.
+
 ## Standard Build via command-line
 ```
 git clone --recursive https://github.com/shaileshpranav/Human_avoidance
