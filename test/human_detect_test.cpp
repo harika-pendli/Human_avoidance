@@ -18,7 +18,8 @@
 HumanDetector ins;
 const char* keys_img =
     "{image img|../input/1.png|input image}"
-    "{video vid|<none>|input video}";
+    "{video vid|<none>|input video}"
+    "{hide_output|True|hide output}";
 int argc = 0;
 const char* argv = "";
 
@@ -29,7 +30,8 @@ TEST(Driver, detect_image) {
 
 const char* keys_vid =
     "{image img|<none>|input image}"
-    "{video vid|../input/video.mp4|input video}";
+    "{video vid|../input/video.mp4|input video}"
+    "{hide_output|True|hide output}";
 
 TEST(Driver, detect_video) {
   cv::CommandLineParser parser(argc, &argv, keys_vid);

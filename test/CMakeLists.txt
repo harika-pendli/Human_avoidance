@@ -4,14 +4,15 @@ find_package( OpenCV REQUIRED )
 
 add_executable(cpp-test
     main.cpp
-    track_test.cpp
+    # track_test.cpp
     human_detect_test.cpp
     data_read_test.cpp
     transformation_test.cpp
     modelConfig_test.cpp
     ../app/transformation.cpp ../app/track.cpp 
     ../app/Human_detector.cpp ../app/modelConfig.cpp
-    ../app/data_reader.cpp ../app/track.cpp
+    ../app/data_reader.cpp 
+    # ../app/track.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 
