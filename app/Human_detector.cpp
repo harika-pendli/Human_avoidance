@@ -203,11 +203,13 @@ void HumanDetector::detect(cv::CommandLineParser parser) {
     else
       input.videoProcessor('w', detectedFrame, video);
 
-    static const std::string Window_name = " Human detection";
-    namedWindow(Window_name, cv::WINDOW_NORMAL);
-    imshow(Window_name, frame);
-    if (parser.has("image")) {
-      cv::waitKey(3000);
+    if(!parse.has("hide_output")){
+      static const std::string Window_name = " Human detection";
+      namedWindow(Window_name, cv::WINDOW_NORMAL);
+      imshow(Window_name, frame);
+      if (parser.has("image")) {
+        cv::waitKey(3000);
+      }
     }
   }
 

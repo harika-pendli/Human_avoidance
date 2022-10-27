@@ -19,7 +19,8 @@ const char* keys =
     "\n\t\t./app/app --image=../input/1.png"
     "\n\t\t./app/app --video=../input/video.mp4}"
     "{image img||input image}"
-    "{video vid||input video}";
+    "{video vid||input video}"
+    "{hide_output|true| hide output}";
 
 int main(int argc, char** argv) {
   HumanDetector detection;
