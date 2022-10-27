@@ -11,6 +11,7 @@
  */
 #include <gtest/gtest.h>
 #include <vector>
+# include <opencv2/opencv.hpp>
 
 #include <../include/transformation.hpp>
 Transform t;
@@ -23,6 +24,7 @@ TEST(TestSetGet, test_dist) {
 TEST(TestSetGet, test_frame) {
     float z = 1.75;
     cv::Rect box;
-    cv::Mat frame;
+    box = cv::Rect(10, 20, 15, 15);
+    cv::Mat frame = cv::imread("../input/1.png");
     EXPECT_NO_FATAL_FAILURE(t.camera_robot_array(z, box,frame));
 }
