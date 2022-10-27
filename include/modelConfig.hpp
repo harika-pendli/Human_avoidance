@@ -1,11 +1,12 @@
 /**
  * @file modelConfig.hpp
- * @author Shailesh Pranav Rajendran (spraj@umd.edu)
- * @brief
+ * @author Harika Pendli (hpendli@umd.edu) and Shailesh Pranav Rajendran
+ * (spraj@umd.edu) 
+ * @brief Class for accessing model configurations
  * @version 0.1
  * @date 2022-10-24
  *
- * @copyright Copyright (c) 2022
+ * @copyright MIT License (c) 2022 Shailesh Pranav Rajendran and Harika Pendli
  *
  */
 

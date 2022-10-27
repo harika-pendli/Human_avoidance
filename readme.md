@@ -102,8 +102,7 @@ sh dependencies.sh
 ```
 git clone --recursive https://github.com/shaileshpranav/Human_avoidance
 cd <path to repository>
-cd input/
-sh script.sh && cd ..
+sh script.sh
 mkdir build && cd build
 cmake ..
 make

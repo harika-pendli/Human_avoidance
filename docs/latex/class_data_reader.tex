@@ -1,0 +1,324 @@
+\hypertarget{class_data_reader}{}\doxysection{Data\+Reader Class Reference}
+\label{class_data_reader}\index{DataReader@{DataReader}}
+
+
+The class for processing the input data before feeding to the detection process.  
+
+
+
+
+{\ttfamily \#include $<$data\+\_\+reader.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_data_reader_ab9c8558242d6739e2fec90c6e493e91e}{Data\+Reader}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Data Reader object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_reader_a1d67b5faf23efc31b46e24fcc99ac0e0}{set\+Imagepath}} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Set the Imagepath object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_reader_ae5fa3e925d75524cb13640324ee7db83}{set\+Videopath}} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Set the Videopath object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_data_reader_a8dec2a5da53c34ac0594a2ab61af1775}{get\+Imagepath}} ()
+\begin{DoxyCompactList}\small\item\em Get the Imagepath object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_data_reader_acbf9042508cd7b11fac0921895be9432}{get\+Videopath}} ()
+\begin{DoxyCompactList}\small\item\em Get the Videopath object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_data_reader_a7d52b5b519bef44bae5f0620babe88b1}{get\+Output\+Width}} ()
+\begin{DoxyCompactList}\small\item\em Get the Output Width object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_data_reader_afae02a3dd3e4731a9b28562d55905994}{get\+Output\+Height}} ()
+\begin{DoxyCompactList}\small\item\em Get the Output Height object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_reader_aae4cd498a8cddf306ead2ad8f1bebf6e}{set\+Output\+Height}} (int height)
+\begin{DoxyCompactList}\small\item\em Set the Output Height object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_data_reader_ad0673a849823e57e04d9e6711b0c3368}{set\+Output\+Width}} (int width)
+\begin{DoxyCompactList}\small\item\em Set the Output Width object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_data_reader_ab1995f5d83c42fc4142382931d522d18}{get\+Input}} (const cv\+::\+Command\+Line\+Parser parser)
+\begin{DoxyCompactList}\small\item\em Get the Input data\+Type. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_data_reader_a5143f991580238de969907e4f5cc954f}{get\+Input\+Type}} (const cv\+::\+Command\+Line\+Parser parser)
+\begin{DoxyCompactList}\small\item\em Get the Input data\+Type. \end{DoxyCompactList}\item 
+cv\+::\+Video\+Capture \mbox{\hyperlink{class_data_reader_a6125953b6ebc4ef91d81048412a0c72e}{img\+Processor}} (char, cv\+::\+Mat frame)
+\begin{DoxyCompactList}\small\item\em A function for image preprocessing. \end{DoxyCompactList}\item 
+cv\+::\+Video\+Capture \mbox{\hyperlink{class_data_reader_a36b41ce8632345f00d06a4d43c0ff608}{video\+Processor}} (char, cv\+::\+Mat frame, cv\+::\+Video\+Writer video)
+\begin{DoxyCompactList}\small\item\em A function for video preprocessing. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_data_reader_a02693a5a9957e01bc3564416fc926015}{get\+Input}} (cv\+::\+Command\+Line\+Parser, std\+::string \&)
+\begin{DoxyCompactList}\small\item\em Get the Input object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_data_reader_a1fd456f99a9b364953f7973842ea5d25}{$\sim$\+Data\+Reader}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Data Reader object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The class for processing the input data before feeding to the detection process. 
+
+Definition at line 23 of file data\+\_\+reader.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_data_reader_ab9c8558242d6739e2fec90c6e493e91e}\label{class_data_reader_ab9c8558242d6739e2fec90c6e493e91e}} 
+\index{DataReader@{DataReader}!DataReader@{DataReader}}
+\index{DataReader@{DataReader}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{DataReader()}{DataReader()}}
+{\footnotesize\ttfamily Data\+Reader\+::\+Data\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Data Reader object. 
+
+Constructor for Data Reader.
+
+Definition at line 18 of file data\+\_\+reader.\+cpp.
+
+\mbox{\Hypertarget{class_data_reader_a1fd456f99a9b364953f7973842ea5d25}\label{class_data_reader_a1fd456f99a9b364953f7973842ea5d25}} 
+\index{DataReader@{DataReader}!````~DataReader@{$\sim$DataReader}}
+\index{````~DataReader@{$\sim$DataReader}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{$\sim$DataReader()}{~DataReader()}}
+{\footnotesize\ttfamily Data\+Reader\+::$\sim$\+Data\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the Data Reader object. 
+
+
+
+Definition at line 85 of file data\+\_\+reader.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_data_reader_a8dec2a5da53c34ac0594a2ab61af1775}\label{class_data_reader_a8dec2a5da53c34ac0594a2ab61af1775}} 
+\index{DataReader@{DataReader}!getImagepath@{getImagepath}}
+\index{getImagepath@{getImagepath}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{getImagepath()}{getImagepath()}}
+{\footnotesize\ttfamily std\+::string Data\+Reader\+::get\+Imagepath (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Imagepath object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file data\+\_\+reader.\+cpp.
+
+\mbox{\Hypertarget{class_data_reader_ab1995f5d83c42fc4142382931d522d18}\label{class_data_reader_ab1995f5d83c42fc4142382931d522d18}} 
+\index{DataReader@{DataReader}!getInput@{getInput}}
+\index{getInput@{getInput}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{getInput()}{getInput()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string Data\+Reader\+::get\+Input (\begin{DoxyParamCaption}\item[{const cv\+::\+Command\+Line\+Parser}]{parser }\end{DoxyParamCaption})}
+
+
+
+Get the Input data\+Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parser} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string \textquotesingle{}Image\textquotesingle{}, \textquotesingle{}Video\textquotesingle{} or \textquotesingle{}Error\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_data_reader_a02693a5a9957e01bc3564416fc926015}\label{class_data_reader_a02693a5a9957e01bc3564416fc926015}} 
+\index{DataReader@{DataReader}!getInput@{getInput}}
+\index{getInput@{getInput}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{getInput()}{getInput()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::string Data\+Reader\+::get\+Input (\begin{DoxyParamCaption}\item[{cv\+::\+Command\+Line\+Parser}]{parser,  }\item[{std\+::string \&}]{input\+\_\+\+Type }\end{DoxyParamCaption})}
+
+
+
+Get the Input object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 26 of file data\+\_\+reader.\+cpp.
+
+\mbox{\Hypertarget{class_data_reader_a5143f991580238de969907e4f5cc954f}\label{class_data_reader_a5143f991580238de969907e4f5cc954f}} 
+\index{DataReader@{DataReader}!getInputType@{getInputType}}
+\index{getInputType@{getInputType}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{getInputType()}{getInputType()}}
+{\footnotesize\ttfamily std\+::string Data\+Reader\+::get\+Input\+Type (\begin{DoxyParamCaption}\item[{const cv\+::\+Command\+Line\+Parser}]{parser }\end{DoxyParamCaption})}
+
+
+
+Get the Input data\+Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parser} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string \textquotesingle{}Image\textquotesingle{}, \textquotesingle{}Video\textquotesingle{} or \textquotesingle{}Error\textquotesingle{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_data_reader_afae02a3dd3e4731a9b28562d55905994}\label{class_data_reader_afae02a3dd3e4731a9b28562d55905994}} 
+\index{DataReader@{DataReader}!getOutputHeight@{getOutputHeight}}
+\index{getOutputHeight@{getOutputHeight}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{getOutputHeight()}{getOutputHeight()}}
+{\footnotesize\ttfamily int Data\+Reader\+::get\+Output\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Output Height object. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file data\+\_\+reader.\+cpp.
+
+\mbox{\Hypertarget{class_data_reader_a7d52b5b519bef44bae5f0620babe88b1}\label{class_data_reader_a7d52b5b519bef44bae5f0620babe88b1}} 
+\index{DataReader@{DataReader}!getOutputWidth@{getOutputWidth}}
+\index{getOutputWidth@{getOutputWidth}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{getOutputWidth()}{getOutputWidth()}}
+{\footnotesize\ttfamily int Data\+Reader\+::get\+Output\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Output Width object. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file data\+\_\+reader.\+cpp.
+
+\mbox{\Hypertarget{class_data_reader_acbf9042508cd7b11fac0921895be9432}\label{class_data_reader_acbf9042508cd7b11fac0921895be9432}} 
+\index{DataReader@{DataReader}!getVideopath@{getVideopath}}
+\index{getVideopath@{getVideopath}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{getVideopath()}{getVideopath()}}
+{\footnotesize\ttfamily std\+::string Data\+Reader\+::get\+Videopath (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Videopath object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+
+Definition at line 53 of file data\+\_\+reader.\+cpp.
+
+\mbox{\Hypertarget{class_data_reader_a6125953b6ebc4ef91d81048412a0c72e}\label{class_data_reader_a6125953b6ebc4ef91d81048412a0c72e}} 
+\index{DataReader@{DataReader}!imgProcessor@{imgProcessor}}
+\index{imgProcessor@{imgProcessor}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{imgProcessor()}{imgProcessor()}}
+{\footnotesize\ttfamily cv\+::\+Video\+Capture Data\+Reader\+::img\+Processor (\begin{DoxyParamCaption}\item[{char}]{rw,  }\item[{cv\+::\+Mat}]{frame }\end{DoxyParamCaption})}
+
+
+
+A function for image preprocessing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & The input image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cv\+::\+Video\+Capture 
+\end{DoxyReturn}
+
+
+Definition at line 55 of file data\+\_\+reader.\+cpp.
+
+\mbox{\Hypertarget{class_data_reader_a1d67b5faf23efc31b46e24fcc99ac0e0}\label{class_data_reader_a1d67b5faf23efc31b46e24fcc99ac0e0}} 
+\index{DataReader@{DataReader}!setImagepath@{setImagepath}}
+\index{setImagepath@{setImagepath}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{setImagepath()}{setImagepath()}}
+{\footnotesize\ttfamily void Data\+Reader\+::set\+Imagepath (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Set the Imagepath object. 
+
+
+
+Definition at line 23 of file data\+\_\+reader.\+cpp.
+
+\mbox{\Hypertarget{class_data_reader_aae4cd498a8cddf306ead2ad8f1bebf6e}\label{class_data_reader_aae4cd498a8cddf306ead2ad8f1bebf6e}} 
+\index{DataReader@{DataReader}!setOutputHeight@{setOutputHeight}}
+\index{setOutputHeight@{setOutputHeight}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{setOutputHeight()}{setOutputHeight()}}
+{\footnotesize\ttfamily void Data\+Reader\+::set\+Output\+Height (\begin{DoxyParamCaption}\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Set the Output Height object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em height} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file data\+\_\+reader.\+cpp.
+
+\mbox{\Hypertarget{class_data_reader_ad0673a849823e57e04d9e6711b0c3368}\label{class_data_reader_ad0673a849823e57e04d9e6711b0c3368}} 
+\index{DataReader@{DataReader}!setOutputWidth@{setOutputWidth}}
+\index{setOutputWidth@{setOutputWidth}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{setOutputWidth()}{setOutputWidth()}}
+{\footnotesize\ttfamily void Data\+Reader\+::set\+Output\+Width (\begin{DoxyParamCaption}\item[{int}]{width }\end{DoxyParamCaption})}
+
+
+
+Set the Output Width object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file data\+\_\+reader.\+cpp.
+
+\mbox{\Hypertarget{class_data_reader_ae5fa3e925d75524cb13640324ee7db83}\label{class_data_reader_ae5fa3e925d75524cb13640324ee7db83}} 
+\index{DataReader@{DataReader}!setVideopath@{setVideopath}}
+\index{setVideopath@{setVideopath}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{setVideopath()}{setVideopath()}}
+{\footnotesize\ttfamily void Data\+Reader\+::set\+Videopath (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Set the Videopath object. 
+
+
+
+Definition at line 24 of file data\+\_\+reader.\+cpp.
+
+\mbox{\Hypertarget{class_data_reader_a36b41ce8632345f00d06a4d43c0ff608}\label{class_data_reader_a36b41ce8632345f00d06a4d43c0ff608}} 
+\index{DataReader@{DataReader}!videoProcessor@{videoProcessor}}
+\index{videoProcessor@{videoProcessor}!DataReader@{DataReader}}
+\doxysubsubsection{\texorpdfstring{videoProcessor()}{videoProcessor()}}
+{\footnotesize\ttfamily cv\+::\+Video\+Capture Data\+Reader\+::video\+Processor (\begin{DoxyParamCaption}\item[{char}]{rw,  }\item[{cv\+::\+Mat}]{frame,  }\item[{cv\+::\+Video\+Writer}]{video }\end{DoxyParamCaption})}
+
+
+
+A function for video preprocessing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & The current frame \\
+\hline
+{\em video} & Resulting video for the image to be written onto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cv\+::\+Video\+Capture 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file data\+\_\+reader.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/harika/\+E\+N\+P\+M808x/midterm/\+Human\+\_\+avoidance/include/\mbox{\hyperlink{data__reader_8hpp}{data\+\_\+reader.\+hpp}}\item 
+/home/harika/\+E\+N\+P\+M808x/midterm/\+Human\+\_\+avoidance/app/\mbox{\hyperlink{data__reader_8cpp}{data\+\_\+reader.\+cpp}}\end{DoxyCompactItemize}

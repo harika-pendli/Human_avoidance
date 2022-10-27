@@ -1,0 +1,88 @@
+\hypertarget{class_tracker}{}\doxysection{Tracker Class Reference}
+\label{class_tracker}\index{Tracker@{Tracker}}
+
+
+class that tracks the objects from all frames of the video feed  
+
+
+
+
+{\ttfamily \#include $<$track.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_tracker_af1cdd71297cc9078c3b92eba7baf6605}{assign\+\_\+id}} (std\+::vector$<$ float $>$ \&)
+\begin{DoxyCompactList}\small\item\em class that tracks the objects from all frames of the video feed \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_tracker_a0998384c2dd65129581758ce108d698f}{track}} (std\+::vector$<$ float $>$ \&)
+\begin{DoxyCompactList}\small\item\em keeps a record of all the coordinates of the same human\+\_\+instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tracker_ac3ce8a8f929d7239abae91f662eff7da}\label{class_tracker_ac3ce8a8f929d7239abae91f662eff7da}} 
+int {\bfseries frame\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class that tracks the objects from all frames of the video feed 
+
+
+
+Definition at line 24 of file track.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tracker_af1cdd71297cc9078c3b92eba7baf6605}\label{class_tracker_af1cdd71297cc9078c3b92eba7baf6605}} 
+\index{Tracker@{Tracker}!assign\_id@{assign\_id}}
+\index{assign\_id@{assign\_id}!Tracker@{Tracker}}
+\doxysubsubsection{\texorpdfstring{assign\_id()}{assign\_id()}}
+{\footnotesize\ttfamily int Tracker\+::assign\+\_\+id (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$ \&}]{human\+\_\+instance }\end{DoxyParamCaption})}
+
+
+
+class that tracks the objects from all frames of the video feed 
+
+assigns id to track to that particular human instance
+
+
+\begin{DoxyParams}{Parameters}
+{\em human\+\_\+instance} & a vector with (temp\+\_\+id, x,y) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int with a specific id if the object was seen in previous frame else assigned new id 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file track.\+cpp.
+
+\mbox{\Hypertarget{class_tracker_a0998384c2dd65129581758ce108d698f}\label{class_tracker_a0998384c2dd65129581758ce108d698f}} 
+\index{Tracker@{Tracker}!track@{track}}
+\index{track@{track}!Tracker@{Tracker}}
+\doxysubsubsection{\texorpdfstring{track()}{track()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ Tracker\+::track (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$ \&}]{track\+\_\+id\+\_\+instance }\end{DoxyParamCaption})}
+
+
+
+keeps a record of all the coordinates of the same human\+\_\+instance 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track\+\_\+id\+\_\+instance} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 49 of file track.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/harika/\+E\+N\+P\+M808x/midterm/\+Human\+\_\+avoidance/include/\mbox{\hyperlink{track_8hpp}{track.\+hpp}}\item 
+/home/harika/\+E\+N\+P\+M808x/midterm/\+Human\+\_\+avoidance/app/\mbox{\hyperlink{track_8cpp}{track.\+cpp}}\end{DoxyCompactItemize}

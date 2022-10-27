@@ -1,0 +1,80 @@
+\hypertarget{class_transform}{}\doxysection{Transform Class Reference}
+\label{class_transform}\index{Transform@{Transform}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_transform_aa08ca4266efabc768973cdeea51945ab}{Transform}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_transform}{Transform}} class. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_transform_a5a218484aad06b164aa8eb4ec7afe075}{calculate\+\_\+distance}} (int, int)
+\begin{DoxyCompactList}\small\item\em Function to calculate the distance of the person from the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_transform_adda915308fa385bf86a2d60908547233}{camera\+\_\+robot\+\_\+array}} (float, cv\+::\+Rect, cv\+::\+Mat)
+\begin{DoxyCompactList}\small\item\em Method for frame transformation from camera to robot frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file transformation.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_transform_aa08ca4266efabc768973cdeea51945ab}\label{class_transform_aa08ca4266efabc768973cdeea51945ab}} 
+\index{Transform@{Transform}!Transform@{Transform}}
+\index{Transform@{Transform}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily Transform\+::\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{class_transform}{Transform}} class. 
+
+
+
+Definition at line 14 of file transformation.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_transform_a5a218484aad06b164aa8eb4ec7afe075}\label{class_transform_a5a218484aad06b164aa8eb4ec7afe075}} 
+\index{Transform@{Transform}!calculate\_distance@{calculate\_distance}}
+\index{calculate\_distance@{calculate\_distance}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{calculate\_distance()}{calculate\_distance()}}
+{\footnotesize\ttfamily float Transform\+::calculate\+\_\+distance (\begin{DoxyParamCaption}\item[{int}]{box\+\_\+h,  }\item[{int}]{frame\+\_\+h }\end{DoxyParamCaption})}
+
+
+
+Function to calculate the distance of the person from the camera. 
+
+\begin{DoxyReturn}{Returns}
+int distance from camera 
+\end{DoxyReturn}
+
+
+Definition at line 16 of file transformation.\+cpp.
+
+\mbox{\Hypertarget{class_transform_adda915308fa385bf86a2d60908547233}\label{class_transform_adda915308fa385bf86a2d60908547233}} 
+\index{Transform@{Transform}!camera\_robot\_array@{camera\_robot\_array}}
+\index{camera\_robot\_array@{camera\_robot\_array}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{camera\_robot\_array()}{camera\_robot\_array()}}
+{\footnotesize\ttfamily void Transform\+::camera\+\_\+robot\+\_\+array (\begin{DoxyParamCaption}\item[{float}]{z,  }\item[{cv\+::\+Rect}]{box,  }\item[{cv\+::\+Mat}]{frame }\end{DoxyParamCaption})}
+
+
+
+Method for frame transformation from camera to robot frame. 
+
+transforms the detected human coordinates into robot coordinate system and displays
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::vector$<$float$>$$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 33 of file transformation.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/harika/\+E\+N\+P\+M808x/midterm/\+Human\+\_\+avoidance/include/transformation.\+hpp\item 
+/home/harika/\+E\+N\+P\+M808x/midterm/\+Human\+\_\+avoidance/app/\mbox{\hyperlink{transformation_8cpp}{transformation.\+cpp}}\end{DoxyCompactItemize}
