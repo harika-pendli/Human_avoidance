@@ -125,6 +125,4 @@ cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $(
 ```
 sudo apt-install doxywizard
 run doxywizard
-source it to ENPM808X_Midterm_Manipulator_IKSolver/
-run the doxygen
 ```
