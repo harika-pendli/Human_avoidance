@@ -14,9 +14,6 @@ cmake ../opencv
 make -j4
 sudo make install
 
-#eigen 
-sudo apt install libeigen3-dev
-
 sudo sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
 sudo ldconfig
 cd ../../

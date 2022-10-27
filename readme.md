@@ -87,10 +87,23 @@ The updated coordinates along with the frame will be sent to the tracker functio
 
 - Duplicate detections: It can happen due to low lighting or bad lighting conditions or bas resolution and quality of the video or the image.
 
-## Standard Build via command-line
+##  Install Dependencies
+- Ubuntu 20.04(LTS)
+- CMake
+- OpenCV
+- Github CI
+- Coveralls
+- Git
+```
+sh dependencies.sh
+```
+
+## Build via command-line
 ```
 git clone --recursive https://github.com/shaileshpranav/Human_avoidance
 cd <path to repository>
+cd input/
+sh script.sh && cd ..
 mkdir build && cd build
 cmake ..
 make
@@ -114,23 +127,6 @@ sudo apt-get install lcov
 cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
 make
 make code_coverage
-```
-
-##  Install Dependencies
-
-- Ubuntu 20.04(LTS)
-
-- CMake
-
-- OpenCV
-
-- Github CI
-
-- Coveralls
-
-- Git
-```
-sh dependencies.sh
 ```
 ## Plugins
 - Google C++ Sytle
