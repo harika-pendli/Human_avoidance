@@ -1,0 +1,152 @@
+\href{https://opensource.org/licenses/MIT}{\texttt{ }} \href{https://github.com/shaileshpranav/Human_avoidance/actions/workflows/CI.yml}{\texttt{ }} \href{https://coveralls.io/github/shaileshpranav/Human_avoidance?branch=main}{\texttt{ }}\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md1}{}\doxysection{Overview}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md1}
+Human detection and tracking project for Midterm of course E\+N\+PM 808X
+
+Acme Robotics Inc. is a private company set to launch a 4-\/wheeled robot used to deliver packages inside office for an undisclosed multinational company next. This robot is set to debut early next year. It moves in the corridor at a walking pace. The package is stored inside of the robot and drives itself to the customer. They have given us complete ownership of designing and developing a new feature for this robot\textquotesingle{}s perceeption stack -\/\char`\"{}\+Human detector and tracker\char`\"{}.
+
+Object detection is a very important computer vision task. Human detection is the task of locating all instances of human beings present in an image, and it has been most widely accomplished by searching all locations in the image, at all possible scales, and comparing a small area at each location with known templates or patterns of people. Human tracking is the process of temporally associating the human detections within a video sequence to generate persistent paths, or trajectories, of the people. Human detection and tracking are generally considered the first two processes in a video surveillance pipeline, and can feed into higher-\/level reasoning modules such as action recognition and dynamic scene analysis. Object detection and tracking is of utmost importance for different kinds of applications such as safety, surveillance, man-\/machine interaction, driving assistance system, traffic monitoring. Finding people in images has attracted much attention in recent years for practical applications such as visual surveillance. The detection of a human being is important for abnormal event detection, human gait characterization, people counting, person identification and tracking, pedestrian detection, gender classification. Human detection and tracking are tasks of computer vision systems for locating and following people in video imagery.
+
+This is an example of human detection.
+
+
+
+And This is an example of human tracking.
+
+
+
+In this module, we aim to build a module which when recieves video feed, starts detecting humans in the frame and gives ID to individual instances and tracks them over rest of the frames. These coordinates are then transformed into the robots reference frame and the final output is their (x,y,z) coordinate with respect to the robot reference frame.\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md2}{}\doxysection{Authors}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md2}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/shaileshpranav}{\texttt{ Shailesh Pranav Rajendran}}
+\item \href{https://github.com/harika-pendli}{\texttt{ Harika Pendli}}
+\end{DoxyItemize}\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md3}{}\doxysection{License}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md3}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{MIT License}
+\DoxyCodeLine{}
+\DoxyCodeLine{Copyright (c) 2022 Shailesh Pranav Rajendran, Harika Pendli}
+\DoxyCodeLine{}
+\DoxyCodeLine{Permission is hereby granted, free of charge, to any person obtaining a copy}
+\DoxyCodeLine{of this software and associated documentation files (the "Software"), to deal}
+\DoxyCodeLine{in the Software without restriction, including without limitation the rights}
+\DoxyCodeLine{to use, copy, modify, merge, publish, distribute, sublicense, and/or sell}
+\DoxyCodeLine{copies of the Software, and to permit persons to whom the Software is}
+\DoxyCodeLine{furnished to do so, subject to the following conditions:}
+\DoxyCodeLine{}
+\DoxyCodeLine{The above copyright notice and this permission notice shall be included in all}
+\DoxyCodeLine{copies or substantial portions of the Software.}
+\DoxyCodeLine{}
+\DoxyCodeLine{THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR}
+\DoxyCodeLine{IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,}
+\DoxyCodeLine{FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE}
+\DoxyCodeLine{AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER}
+\DoxyCodeLine{LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,}
+\DoxyCodeLine{OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE}
+\DoxyCodeLine{SOFTWARE.}
+\end{DoxyCode}
+\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md4}{}\doxysection{Links}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md4}
+
+\begin{DoxyItemize}
+\item \href{https://github.com/shaileshpranav/Human_avoidance/blob/main/Proposal.pdf}{\texttt{ Phase-\/0 Proposal}}
+\item \href{https://drive.google.com/file/d/1JcN-jdWsAfGG5XlVniN_F_-hbOWnSuIF/view?usp=sharing}{\texttt{ Phase-\/0 Proposal Video}}
+\item \href{https://docs.google.com/spreadsheets/d/13NfVb0g8LwvVlH9F1EcA1EnQb8gwcYmieM8Q2csQmX0/edit\#gid=0}{\texttt{ Product-\/log}}
+\item \href{https://docs.google.com/document/d/1Nb_psVTufyzcFsdD67MJTqQvALrAlez0QEYVcEus4a4/edit}{\texttt{ Sprint Review}}
+\item \href{https://drive.google.com/file/d/1zdG5oJxihnf690Nj9lmH-NxazA3RiWn2/view?usp=sharing}{\texttt{ Phase 1 Update Video}}
+\end{DoxyItemize}\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md5}{}\doxysection{Demo}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md5}
+\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md6}{}\doxysection{Design and Development process}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md6}
+We made use of E\+SC methodology for the initial design process which is by extraction of significant concepts (E\+SC). We have identified the classes of the future program and their responsibilities. The class relations have been explained through U\+ML class diagrams which cn be found in the \href{https://github.com/harika-pendli/Human_avoidance/blob/dev2/uml/revised/UML_final.png}{\texttt{ U\+ML revised folder}}
+
+Our software team worked on this project through iterative software evolution and service processes. We engaged in Agile Iterative Development Process (A\+IP) through Test-\/\+Driven Development during the entire project period. Being a team of two programmers, we have decided to adopt pair programming and switch roles as navigator and drive as and when necessary.\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md7}{}\doxysection{Algorithm and methodology}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md7}
+The perception pipeline flows as follows\+: command parser in data loader classes parses the arguments to retrieve the input to the pipeline (image/video), which then goes to the Human detector class which acts like a driver class. Here the yolo model config class and the transformation class intervenes to detect humans and get the depth or the distance of the humans from the camera respectively. We also have a Tracking stub class which we aim to update and release this functionality in the next version 0.\+02.
+
+First, the class Human detector is initialized, which in turn initializes, the other two classes namely, the model\+Config class, and the data loader class. Here detection takes place for each frame (if provided with video input) or an image based on the pre-\/trained \href{https://pjreddie.com/darknet/yolo/}{\texttt{ Y\+O\+L\+Ov3 model}}. This detection is then passed to the transformation class where the x,y,z coordinate in the robot frame is calculated and the y-\/coordinate (depth) or the distance of the person from the robot is calculated (transformation from camera frame to robot reference frame) and shown on the image or video output. Currently we have made a basic tracker system but we plan to release it in the next build.
+
+For the unimplemented tracker class, we plan to do the following\+: The updated coordinates along with the frame will be sent to the tracker function of the \mbox{\hyperlink{class_tracker}{Tracker}} class where detection and tracking will be managed by the \href{https://github.com/nwojke/deep_sort}{\texttt{ Deep\+S\+O\+RT}} deeplearning model. Here the detected objects are assigned unique ids. This id along with the frame id as well as the coordinate of the object in the camera frame is saved in an array. This process is repeated until all the image frames are completed.\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md8}{}\doxysection{Known Issues/\+Risks}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Missed detection\+: It may happen that the model sometimes misses some human objects during detection. In such a case, deploying more than one and different models can be viable.
+\item Duplicate detections\+: It can happen due to low lighting or bad lighting conditions or bas resolution and quality of the video or the image.
+\end{DoxyItemize}\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md9}{}\doxysection{Install Dependencies}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md9}
+
+\begin{DoxyItemize}
+\item Ubuntu 20.\+04(L\+TS)
+\item C\+Make
+\item Open\+CV
+\item Github CI
+\item Coveralls
+\item Git 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sh dependencies.sh}
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md10}{}\doxysection{Build via command-\/line}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md10}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone -\/-\/recursive https://github.com/shaileshpranav/Human\_avoidance}
+\DoxyCodeLine{cd <path to repository>}
+\DoxyCodeLine{sh script.sh}
+\DoxyCodeLine{mkdir build \&\& cd build}
+\DoxyCodeLine{cmake ..}
+\DoxyCodeLine{make}
+\end{DoxyCode}
+\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md11}{}\doxysection{Run Test\+:}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md11}
+\begin{DoxyVerb}./test/cpp-test
+\end{DoxyVerb}
+ \hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md12}{}\doxysection{Run program\+:}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md12}
+
+\begin{DoxyItemize}
+\item For Image 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./app/app -\/-\/image=../input/1.png}
+\end{DoxyCode}
+
+\item For video 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./app/app -\/-\/video=../input/video.mp4}
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md13}{}\doxysection{Building for code coverage}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md13}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-\/get install lcov}
+\DoxyCodeLine{cmake -\/D COVERAGE=ON -\/D CMAKE\_BUILD\_TYPE=Debug ../}
+\DoxyCodeLine{make}
+\DoxyCodeLine{make code\_coverage}
+\end{DoxyCode}
+\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md14}{}\doxysection{Plugins}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md14}
+
+\begin{DoxyItemize}
+\item Google C++ Sytle 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{clang-\/format -\/style=Google -\/i your\_file.cpp}
+\end{DoxyCode}
+
+\item Cpplint
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# You may need to install cpplint:}
+\DoxyCodeLine{sudo apt install python3-\/pip}
+\DoxyCodeLine{pip install cpplint}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# read the cpplint manual to get an idea of what it does:}
+\DoxyCodeLine{\string~/.local/bin/cpplint -\/h}
+\DoxyCodeLine{\#to run on a file:}
+\DoxyCodeLine{cpplint "FIlename.cpp"}
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item cpp\+Check 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cppcheck -\/-\/enable=all -\/-\/std=c++11 -\/I include/ -\/-\/suppress=missingIncludeSystem \$( find . -\/name *.cpp | grep -\/vE -\/e "\string^./build/" -\/e "\string^./vendor/" )}
+\end{DoxyCode}
+
+\end{DoxyItemize}\hypertarget{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md15}{}\doxysection{Running Doxygen}\label{md__home_harika__e_n_p_m808x_midterm__human_avoidance_readme_autotoc_md15}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo apt-\/install doxywizard}
+\DoxyCodeLine{run doxywizard}
+\end{DoxyCode}
+ 

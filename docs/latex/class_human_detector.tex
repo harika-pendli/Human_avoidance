@@ -1,0 +1,123 @@
+\hypertarget{class_human_detector}{}\doxysection{Human\+Detector Class Reference}
+\label{class_human_detector}\index{HumanDetector@{HumanDetector}}
+
+
+This class will be the driver class for the project.  
+
+
+
+
+{\ttfamily \#include $<$Human\+\_\+detector.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_human_detector_a8910bbd14716e8e47a4f3d33daeb5eba}{Human\+Detector}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for Human Detector object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_human_detector_a74eeedd5cb552634ac148a33808d99a1}{rm\+Overlap}} (cv\+::\+Mat \&, const std\+::vector$<$ cv\+::\+Mat $>$ \&, const std\+::vector$<$ std\+::string $>$ \&)
+\begin{DoxyCompactList}\small\item\em Method to remove overlap boxes with lower confidence. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_human_detector_a32505cb90e1d1b26ab8c213085d172a3}{draw\+Box}} (int, float, int, int, int, int, cv\+::\+Mat \&, const std\+::vector$<$ std\+::string $>$ \&, unsigned int, float)
+\begin{DoxyCompactList}\small\item\em Method to draw a bounding box around the person. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_human_detector_a7d68a47c9c33562711143a391004fe00}{get\+Outputs\+Names}} (const cv\+::dnn\+::\+Net \&)
+\begin{DoxyCompactList}\small\item\em Get the Outputs Layer Names. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_human_detector_a3c4cab2d2b3eeb11c25fda63fe56525f}{detect}} (cv\+::\+Command\+Line\+Parser)
+\begin{DoxyCompactList}\small\item\em Function to detect the humans. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class will be the driver class for the project. 
+
+
+
+Definition at line 30 of file Human\+\_\+detector.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_human_detector_a8910bbd14716e8e47a4f3d33daeb5eba}\label{class_human_detector_a8910bbd14716e8e47a4f3d33daeb5eba}} 
+\index{HumanDetector@{HumanDetector}!HumanDetector@{HumanDetector}}
+\index{HumanDetector@{HumanDetector}!HumanDetector@{HumanDetector}}
+\doxysubsubsection{\texorpdfstring{HumanDetector()}{HumanDetector()}}
+{\footnotesize\ttfamily Human\+Detector\+::\+Human\+Detector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for Human Detector object. 
+
+Constructor for Human Detector class.
+
+Definition at line 19 of file Human\+\_\+detector.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_human_detector_a3c4cab2d2b3eeb11c25fda63fe56525f}\label{class_human_detector_a3c4cab2d2b3eeb11c25fda63fe56525f}} 
+\index{HumanDetector@{HumanDetector}!detect@{detect}}
+\index{detect@{detect}!HumanDetector@{HumanDetector}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily void Human\+Detector\+::detect (\begin{DoxyParamCaption}\item[{cv\+::\+Command\+Line\+Parser}]{parser }\end{DoxyParamCaption})}
+
+
+
+Function to detect the humans. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parse} & input parser \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 126 of file Human\+\_\+detector.\+cpp.
+
+\mbox{\Hypertarget{class_human_detector_a32505cb90e1d1b26ab8c213085d172a3}\label{class_human_detector_a32505cb90e1d1b26ab8c213085d172a3}} 
+\index{HumanDetector@{HumanDetector}!drawBox@{drawBox}}
+\index{drawBox@{drawBox}!HumanDetector@{HumanDetector}}
+\doxysubsubsection{\texorpdfstring{drawBox()}{drawBox()}}
+{\footnotesize\ttfamily void Human\+Detector\+::draw\+Box (\begin{DoxyParamCaption}\item[{int}]{class\+Id,  }\item[{float}]{conf,  }\item[{int}]{left,  }\item[{int}]{top,  }\item[{int}]{right,  }\item[{int}]{bottom,  }\item[{cv\+::\+Mat \&}]{frame,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{classes,  }\item[{unsigned int}]{pid,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+Method to draw a bounding box around the person. 
+
+
+
+Definition at line 26 of file Human\+\_\+detector.\+cpp.
+
+\mbox{\Hypertarget{class_human_detector_a7d68a47c9c33562711143a391004fe00}\label{class_human_detector_a7d68a47c9c33562711143a391004fe00}} 
+\index{HumanDetector@{HumanDetector}!getOutputsNames@{getOutputsNames}}
+\index{getOutputsNames@{getOutputsNames}!HumanDetector@{HumanDetector}}
+\doxysubsubsection{\texorpdfstring{getOutputsNames()}{getOutputsNames()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ Human\+Detector\+::get\+Outputs\+Names (\begin{DoxyParamCaption}\item[{const cv\+::dnn\+::\+Net \&}]{net }\end{DoxyParamCaption})}
+
+
+
+Get the Outputs Layer Names. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::string$>$ 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file Human\+\_\+detector.\+cpp.
+
+\mbox{\Hypertarget{class_human_detector_a74eeedd5cb552634ac148a33808d99a1}\label{class_human_detector_a74eeedd5cb552634ac148a33808d99a1}} 
+\index{HumanDetector@{HumanDetector}!rmOverlap@{rmOverlap}}
+\index{rmOverlap@{rmOverlap}!HumanDetector@{HumanDetector}}
+\doxysubsubsection{\texorpdfstring{rmOverlap()}{rmOverlap()}}
+{\footnotesize\ttfamily void Human\+Detector\+::rm\+Overlap (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{frame,  }\item[{const std\+::vector$<$ cv\+::\+Mat $>$ \&}]{outs,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{classes }\end{DoxyParamCaption})}
+
+
+
+Method to remove overlap boxes with lower confidence. 
+
+
+
+Definition at line 75 of file Human\+\_\+detector.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/harika/\+E\+N\+P\+M808x/midterm/\+Human\+\_\+avoidance/include/\mbox{\hyperlink{_human__detector_8hpp}{Human\+\_\+detector.\+hpp}}\item 
+/home/harika/\+E\+N\+P\+M808x/midterm/\+Human\+\_\+avoidance/app/Human\+\_\+detector.\+cpp\end{DoxyCompactItemize}
