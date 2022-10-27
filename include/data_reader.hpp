@@ -33,7 +33,6 @@ class DataReader {
    *
    */
   std::string video_path;
-  
   /**
    * @brief private variable to store output width of the image
    * 

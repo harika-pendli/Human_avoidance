@@ -117,7 +117,8 @@ void HumanDetector::rmOverlap(cv::Mat& frame, const std::vector<cv::Mat>& outs,
     drawBox(classIds[idx], confidences[idx], box.x, box.y, box.x + box.width,
             box.y + box.height, frame, classes, personid, z_axis);
     transform.camera_robot_array(z_axis, box, frame);
-    std::cout<<"Distance from person "<<personid<<" is: "<<z_axis<<"m"<<std::endl;
+    std::cout << "Distance from person " << personid
+      << " is: " << z_axis << "m" << std::endl;
     personid++;
   }
 }
