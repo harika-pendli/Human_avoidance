@@ -16,13 +16,22 @@
 #include <../include/Human_detector.hpp>
 
 HumanDetector ins;
-const char* keys =
-    "{image img||input image}"
-    "{video vid||input video}";
+const char* keys_img =
+    "{image img|../input/1.png|input image}"
+    "{video vid|<none>|input video}";
 int argc = 0;
 const char* argv = "";
-TEST(Driver, detect) {
-  cv::CommandLineParser parser(argc, &argv, keys);
+
+TEST(Driver, detect_image) {
+  cv::CommandLineParser parser(argc, &argv, keys_img);
   EXPECT_NO_FATAL_FAILURE(ins.detect(parser));
 }
 
+const char* keys_vid =
+    "{image img|<none>|input image}"
+    "{video vid|../input/video.mp4|input video}";
+
+TEST(Driver, detect_video) {
+  cv::CommandLineParser parser(argc, &argv, keys_vid);
+  EXPECT_NO_FATAL_FAILURE(ins.detect(parser));
+}
