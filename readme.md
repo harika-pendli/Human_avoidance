@@ -62,6 +62,8 @@ SOFTWARE.
 
 - [Phase 1 Update Video](https://drive.google.com/file/d/1zdG5oJxihnf690Nj9lmH-NxazA3RiWn2/view?usp=sharing)
 
+- [Phase 2 Video](https://drive.google.com/file/d/1LY7inmvsYGOaWUP88271DZV2n9_iKjeI/view?usp=sharing)
+
 ## Demo
 <img src="output/Result.gif">
 

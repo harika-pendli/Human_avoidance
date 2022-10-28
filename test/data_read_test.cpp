@@ -73,6 +73,7 @@ TEST(testProcessor, testImgProcessor) {
   cv::Mat frame = cv::imread("../input/1.png");
   EXPECT_NO_FATAL_FAILURE(data.imgProcessor('r', frame));
   EXPECT_NO_FATAL_FAILURE(data.imgProcessor('w', frame));
+  EXPECT_NO_FATAL_FAILURE(data.imgProcessor('x', frame));
 }
 
 TEST(testProcessor, testVideoProcessor) {
@@ -84,4 +85,5 @@ TEST(testProcessor, testVideoProcessor) {
   data.setOutputWidth(640);
   EXPECT_NO_FATAL_FAILURE(data.videoProcessor('r', frame, video));
   EXPECT_NO_FATAL_FAILURE(data.videoProcessor('w', frame, video));
+  EXPECT_NO_FATAL_FAILURE(data.videoProcessor('q', frame, video));
 }
