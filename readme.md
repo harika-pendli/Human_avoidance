@@ -4,6 +4,10 @@
 [![C/C++ CI](https://github.com/shaileshpranav/Human_avoidance/actions/workflows/CI.yml/badge.svg)](https://github.com/shaileshpranav/Human_avoidance/actions/workflows/CI.yml)
 [![Coverage Status](https://coveralls.io/repos/github/shaileshpranav/Human_avoidance/badge.svg?branch=main)](https://coveralls.io/github/shaileshpranav/Human_avoidance?branch=main)
 
+## Authors
+- [Shailesh Pranav Rajendran](https://github.com/shaileshpranav)
+- [Harika Pendli](https://github.com/harika-pendli)
+
 ## Overview
 Human detection and tracking project for Midterm of course ENPM 808X
 
@@ -21,9 +25,6 @@ And This is an example of human tracking.
 
 In this module, we aim to build a module which when recieves video feed, starts detecting humans in the frame and gives ID to individual instances and tracks them over rest of the frames. These coordinates are then transformed into the robots reference frame and the final output is their (x,y,z) coordinate with respect to the robot reference frame.
 
-## Authors
-- [Shailesh Pranav Rajendran](https://github.com/shaileshpranav)
-- [Harika Pendli](https://github.com/harika-pendli)
 
 ## License 
 ```
